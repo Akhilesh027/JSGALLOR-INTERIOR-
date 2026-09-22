@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Sparkles, ShieldCheck, CheckCircle2, Play, Volume2, VolumeX } from 'lucide-react';
-import heroVideo from '../../../MainLandingPage/src/images/furniture Banner Landscape.mp4';
+import heroVideo from '../assets/videos/furniture Banner Landscape.mp4';
 import { useRouter } from '../context/RouterContext';
 
 interface HeroProps {

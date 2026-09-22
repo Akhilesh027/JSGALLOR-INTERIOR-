@@ -1,5 +1,5 @@
 import React from 'react';
-import factoryVideo from '../../../MainLandingPage/src/images/furniture stores.mp4';
+import factoryVideo from '../assets/videos/furniture stores.mp4';
 import { Sparkles, ArrowRight, Layers, Palette, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 

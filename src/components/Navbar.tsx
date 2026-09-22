@@ -3,7 +3,7 @@ import { Phone, Sparkles, Menu, X, ArrowRight, Instagram, Youtube, Linkedin, Fac
 import { useRouter } from '../context/RouterContext';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
-import brandLogo from '../../../Mid_range/src/Image/JSGALORE.png';
+import brandLogo from '../assets/images/JSGALORE.png';
 
 interface NavbarProps {
   onOpenConsultation: () => void;

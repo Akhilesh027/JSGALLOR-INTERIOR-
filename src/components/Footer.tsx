@@ -2,7 +2,7 @@ import React from 'react';
 import { Phone, Mail, MessageSquare, ShieldCheck, Clock, Award, Instagram, Youtube, Linkedin, Facebook } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
-import brandLogo from '../../../Mid_range/src/Image/JSGALORE.png';
+import brandLogo from '../assets/images/JSGALORE.png';
 
 interface FooterProps {
   onOpenConsultation: () => void;

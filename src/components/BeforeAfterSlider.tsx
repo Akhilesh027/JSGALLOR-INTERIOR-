@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { SlidersHorizontal, Sparkles, ArrowLeftRight, CheckCircle2, ShieldCheck, Clock, Sofa, ChefHat, BedDouble, MapPin } from 'lucide-react';
 
-import livingBefore from '../../../../../../.gemini/antigravity-ide/brain/a1a9057c-ed10-4dea-8b28-a0a77ec2b8a0/living_room_before_1788753582838.jpg';
-import livingAfter from '../../../../../../.gemini/antigravity-ide/brain/a1a9057c-ed10-4dea-8b28-a0a77ec2b8a0/living_room_after_1788753554413.jpg';
+import livingBefore from '../assets/images/living_room_before_1788753582838.jpg';
+import livingAfter from '../assets/images/living_room_after_1788753554413.jpg';
 
-import kitchenBefore from '../../../../../../.gemini/antigravity-ide/brain/a1a9057c-ed10-4dea-8b28-a0a77ec2b8a0/kitchen_before_1788758148885.jpg';
-import kitchenAfter from '../../../../../../.gemini/antigravity-ide/brain/a1a9057c-ed10-4dea-8b28-a0a77ec2b8a0/kitchen_after_1788758005217.jpg';
+import kitchenBefore from '../assets/images/kitchen_before_1788758148885.jpg';
+import kitchenAfter from '../assets/images/kitchen_after_1788758005217.jpg';
 
-import bedroomBefore from '../../../../../../.gemini/antigravity-ide/brain/a1a9057c-ed10-4dea-8b28-a0a77ec2b8a0/bedroom_before_1788758196368.jpg';
-import bedroomAfter from '../../../../../../.gemini/antigravity-ide/brain/a1a9057c-ed10-4dea-8b28-a0a77ec2b8a0/bedroom_after_1788758169274.jpg';
+import bedroomBefore from '../assets/images/bedroom_before_1788758196368.jpg';
+import bedroomAfter from '../assets/images/bedroom_after_1788758169274.jpg';
 
 interface TransformationCategory {
   id: string;

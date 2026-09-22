@@ -3,7 +3,7 @@ import { X, Sparkles, CheckCircle2 } from 'lucide-react';
 import { BhkType, TierLevel } from '../types/interior';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
-import brandLogo from '../../../Mid_range/src/Image/JSGALORE.png';
+import brandLogo from '../assets/images/JSGALORE.png';
 
 interface ConsultationModalProps {
   open: boolean;

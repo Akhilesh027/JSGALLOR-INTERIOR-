@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import brandLogo from '../../../Mid_range/src/Image/JSGALORE.png';
+import brandLogo from '../assets/images/JSGALORE.png';
 
 interface BrandLoaderProps {
   onComplete: () => void;

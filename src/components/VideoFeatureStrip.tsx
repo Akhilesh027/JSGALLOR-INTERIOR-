@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import kitchenVideo from '../../../MainLandingPage/src/images/furniture Banner Landscape (1).mp4';
+import kitchenVideo from '../assets/videos/furniture Banner Landscape (1).mp4';
 import { Sparkles, ArrowRight, Utensils, Sofa, BedDouble, CheckCircle2, ShieldCheck, Cpu } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
