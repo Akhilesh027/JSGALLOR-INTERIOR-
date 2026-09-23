@@ -76,11 +76,10 @@ export const VideoFeatureStrip: React.FC<VideoFeatureStripProps> = ({ onOpenCons
               <div
                 key={idx}
                 onClick={() => setActiveFeature(idx)}
-                className={`p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 border backdrop-blur-md ${
-                  activeFeature === idx
+                className={`p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 border backdrop-blur-md ${activeFeature === idx
                     ? 'bg-white/10 border-[#c5a880] shadow-2xl shadow-[#c5a880]/15'
                     : 'bg-black/40 border-white/10 hover:bg-white/5 hover:border-white/20'
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3.5">
