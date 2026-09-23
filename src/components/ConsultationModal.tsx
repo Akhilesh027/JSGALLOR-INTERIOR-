@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { X, Sparkles, CheckCircle2 } from 'lucide-react';
+import { X, Sparkles, CheckCircle2, Loader2 } from 'lucide-react';
 import { BhkType, TierLevel } from '../types/interior';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import { submitInteriorInquiry } from '../services/inquiryService';
 
 import brandLogo from '../assets/images/JSGALORE.png';
 
@@ -22,31 +23,56 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   const [plotMeasurements, setPlotMeasurements] = useState('');
   const [budgetEstimation, setBudgetEstimation] = useState('₹10L – ₹18L (Standard Complete)');
   const [locality, setLocality] = useState('');
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   if (!open) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
 
-    const text = `*New 3D Design Session Booking*%0A` +
-      `*Name:* ${name}%0A` +
-      `*Phone:* ${phone}%0A` +
-      `*Email:* ${email || 'Not provided'}%0A` +
-      `*Property Layout:* ${bhk}%0A` +
-      `*Plot Measurements / Area:* ${plotMeasurements || 'Not specified'}%0A` +
-      `*Budget Estimation:* ${budgetEstimation}%0A` +
-      `*City/Locality:* ${locality || 'Hyderabad'}%0A%0A` +
-      `Please confirm my free 3D design consultation appointment.`;
+    try {
+      await submitInteriorInquiry({
+        name,
+        phone,
+        email,
+        formType: 'consultation',
+        bhk,
+        plotMeasurements,
+        budgetEstimation,
+        city: 'Hyderabad',
+        locality,
+      });
+    } catch (err) {
+      console.error('Error saving consultation inquiry:', err);
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
 
-    const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
+      const text = `*New 3D Design Session Booking*%0A` +
+        `*Name:* ${name}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Email:* ${email || 'Not provided'}%0A` +
+        `*Property Layout:* ${bhk}%0A` +
+        `*Plot Measurements / Area:* ${plotMeasurements || 'Not specified'}%0A` +
+        `*Budget Estimation:* ${budgetEstimation}%0A` +
+        `*City/Locality:* ${locality || 'Hyderabad'}%0A%0A` +
+        `Please confirm my free 3D design consultation appointment.`;
 
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank');
-      onClose();
-      setSubmitted(false);
-    }, 1200);
+      const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
+
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        onClose();
+        setSubmitted(false);
+        setName('');
+        setPhone('');
+        setEmail('');
+        setPlotMeasurements('');
+        setLocality('');
+      }, 1200);
+    }
   };
 
   return (
@@ -191,10 +217,20 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#8c6b38] via-[#c5a880] to-[#8c6b38] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#c5a880]/30 hover:brightness-105 active:scale-95 transition-all mt-4 cursor-pointer"
+                disabled={loading}
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#8c6b38] via-[#c5a880] to-[#8c6b38] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#c5a880]/30 hover:brightness-105 active:scale-95 transition-all mt-4 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
               >
-                <WhatsAppIcon className="w-4 h-4 fill-white" />
-                <span>Confirm & Connect on WhatsApp</span>
+                {loading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Booking Appointment...</span>
+                  </>
+                ) : (
+                  <>
+                    <WhatsAppIcon className="w-4 h-4 fill-white" />
+                    <span>Confirm & Connect on WhatsApp</span>
+                  </>
+                )}
               </button>
             </form>
           </div>

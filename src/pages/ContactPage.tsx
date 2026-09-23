@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { EXPERIENCE_CENTERS, FAQ_DATA } from '../data/interiorData';
-import { MapPin, Phone, Mail, Clock, MessageSquare, ChevronDown, CheckCircle2, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageSquare, ChevronDown, CheckCircle2, Sparkles, Loader2 } from 'lucide-react';
 import { BhkType } from '../types/interior';
+import { submitInteriorInquiry } from '../services/inquiryService';
 
 interface ContactPageProps {
   onOpenConsultation: () => void;
@@ -16,32 +17,51 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
   const [plotMeasurements, setPlotMeasurements] = useState('');
   const [budgetEstimation, setBudgetEstimation] = useState('₹10L – ₹18L (Standard Complete)');
   const [locality, setLocality] = useState('');
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
 
-    const text = `*New Experience Center Appointment*%0A` +
-      `*Name:* ${formName}%0A` +
-      `*Phone:* ${formPhone}%0A` +
-      `*City:* ${formCity}%0A` +
-      `*Property Size:* ${formBhk}%0A` +
-      `*Plot Measurements / Area:* ${plotMeasurements || 'Not specified'}%0A` +
-      `*Budget Estimation:* ${budgetEstimation}%0A` +
-      (locality ? `*Locality / Community:* ${locality}%0A` : '') + `%0A` +
-      `I would like to book an appointment to visit your experience center.`;
+    try {
+      await submitInteriorInquiry({
+        name: formName,
+        phone: formPhone,
+        city: formCity,
+        bhk: formBhk,
+        plotMeasurements,
+        budgetEstimation,
+        locality,
+        formType: 'experience_center_visit',
+      });
+    } catch (err) {
+      console.error('Error saving contact inquiry:', err);
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
 
-    const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
+      const text = `*New Experience Center Appointment*%0A` +
+        `*Name:* ${formName}%0A` +
+        `*Phone:* ${formPhone}%0A` +
+        `*City:* ${formCity}%0A` +
+        `*Property Size:* ${formBhk}%0A` +
+        `*Plot Measurements / Area:* ${plotMeasurements || 'Not specified'}%0A` +
+        `*Budget Estimation:* ${budgetEstimation}%0A` +
+        (locality ? `*Locality / Community:* ${locality}%0A` : '') + `%0A` +
+        `I would like to book an appointment to visit your experience center.`;
 
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank');
-      setSubmitted(false);
-      setFormName('');
-      setFormPhone('');
-      setPlotMeasurements('');
-      setLocality('');
-    }, 1200);
+      const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
+
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        setSubmitted(false);
+        setFormName('');
+        setFormPhone('');
+        setPlotMeasurements('');
+        setLocality('');
+      }, 1200);
+    }
   };
 
   return (
@@ -294,10 +314,20 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#8c6b38] via-[#c5a880] to-[#8c6b38] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#c5a880]/30 hover:brightness-105 active:scale-95 transition-all mt-4 cursor-pointer"
+                  disabled={loading}
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#8c6b38] via-[#c5a880] to-[#8c6b38] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#c5a880]/30 hover:brightness-105 active:scale-95 transition-all mt-4 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                 >
-                  <MessageSquare className="w-4 h-4 fill-white" />
-                  <span>Confirm & Connect on WhatsApp</span>
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Scheduling Appointment...</span>
+                    </>
+                  ) : (
+                    <>
+                      <MessageSquare className="w-4 h-4 fill-white" />
+                      <span>Confirm & Connect on WhatsApp</span>
+                    </>
+                  )}
                 </button>
               </form>
             )}

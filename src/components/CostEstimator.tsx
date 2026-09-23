@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import { Calculator, Check, ArrowRight, MessageSquare, Sparkles, Clock, ShieldCheck, HelpCircle } from 'lucide-react';
+import { Calculator, Check, ArrowRight, MessageSquare, Sparkles, Clock, ShieldCheck, HelpCircle, Loader2 } from 'lucide-react';
 import { BhkType, TierLevel } from '../types/interior';
 import { ROOM_OPTIONS, TIERS_DATA } from '../data/interiorData';
+import { submitInteriorInquiry } from '../services/inquiryService';
 
 interface CostEstimatorProps {
   selectedTier: TierLevel;
@@ -26,6 +27,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
   const [selectedRooms, setSelectedRooms] = useState<string[]>(BHK_MULTIPLIERS['3 BHK'].defaultRooms);
   const [customerName, setCustomerName] = useState('');
   const [customerPhone, setCustomerPhone] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Handle BHK change
   const handleBhkChange = (newBhk: BhkType) => {
@@ -87,11 +89,32 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
   };
 
   // WhatsApp dispatch message
-  const handleWhatsAppQuote = () => {
+  const handleWhatsAppQuote = async () => {
     const tierName = calculation.tier.name;
     const roomNames = ROOM_OPTIONS.filter((r) => selectedRooms.includes(r.id))
       .map((r) => r.name)
       .join(', ');
+
+    if (customerName || customerPhone) {
+      setIsSubmitting(true);
+      try {
+        await submitInteriorInquiry({
+          name: customerName || 'Homeowner',
+          phone: customerPhone || 'Not provided',
+          formType: 'cost_estimator',
+          bhk,
+          selectedTier: tierName,
+          selectedRooms,
+          calculatedEstimate: calculation.calculatedTotal,
+          budgetEstimation: `${formatINR(calculation.minEstimate)} – ${formatINR(calculation.maxEstimate)}`,
+          city: 'Hyderabad',
+        });
+      } catch (err) {
+        console.error('Failed to record estimator quote lead:', err);
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
 
     const text = `*New Interior Estimate Inquiry from Website*%0A` +
       `*Name:* ${customerName ? customerName : 'Homeowner'}%0A` +
@@ -319,10 +342,20 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                 <button
                   type="button"
                   onClick={handleWhatsAppQuote}
-                  className="w-full py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/20 transition-all active:scale-95 cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-lg shadow-emerald-900/20 transition-all active:scale-95 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                 >
-                  <MessageSquare className="w-4 h-4 fill-white" />
-                  <span>Get Itemized PDF on WhatsApp</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin text-white" />
+                      <span>Generating Quote...</span>
+                    </>
+                  ) : (
+                    <>
+                      <MessageSquare className="w-4 h-4 fill-white" />
+                      <span>Get Itemized PDF on WhatsApp</span>
+                    </>
+                  )}
                 </button>
 
                 <button
