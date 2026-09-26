@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import kitchenVideo from '../assets/videos/furniture Banner Landscape (1).mp4';
 import { Sparkles, ArrowRight, Utensils, Sofa, BedDouble, CheckCircle2, ShieldCheck, Cpu } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
@@ -34,17 +33,26 @@ export const VideoFeatureStrip: React.FC<VideoFeatureStripProps> = ({ onOpenCons
 
   return (
     <section className="relative py-28 overflow-hidden bg-[#090a0f] text-white border-b border-white/10">
-      {/* Background Video Layer */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover object-center filter brightness-[0.72] contrast-[1.08]"
-        >
-          <source src={kitchenVideo} type="video/mp4" />
-        </video>
+      {/* Background Video Layer - YouTube embed with 0 controls & autoplay */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <iframe
+          src="https://www.youtube.com/embed/ACZBsOsmA8Y?autoplay=1&mute=1&loop=1&playlist=ACZBsOsmA8Y&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1"
+          title="Architectural Living Showcase Video"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '180vw',
+            height: '180vh',
+            minWidth: '100%',
+            minHeight: '100%',
+            transform: 'translate(-50%, -50%)',
+            border: 'none',
+            pointerEvents: 'none',
+            filter: 'brightness(0.72) contrast(1.08)'
+          }}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-[#090a0f]/85 via-black/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#090a0f]/75 via-transparent to-[#090a0f]/75" />
       </div>

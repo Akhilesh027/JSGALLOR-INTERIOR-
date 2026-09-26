@@ -45,12 +45,52 @@ export const MaterialBrands: React.FC = () => {
       spec: 'Boiling Waterproof Core'
     },
     {
-      name: 'QUARTZ & ONYX',
-      category: 'Premium Quartz & Onyx',
-      origin: 'Exotic Stone',
+      name: 'DUROPLY',
+      category: 'IS:710 BWP & Veneers',
+      origin: 'India',
+      icon: ShieldCheck,
+      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=400&q=80',
+      spec: 'Forest-Grade Marine Ply'
+    },
+    {
+      name: 'ADVANCE LAMINATES',
+      category: 'Decorative Laminates',
+      origin: 'India',
+      icon: Layers,
+      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80',
+      spec: '1mm Silk & Matt Series'
+    },
+    {
+      name: 'GREENLAM',
+      category: 'Silk Matte Acrylics',
+      origin: 'Global',
+      icon: Sparkles,
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80',
+      spec: 'Anti-Bacterial 1.2mm'
+    },
+    {
+      name: 'QUANTRA QUARTZ',
+      category: 'Engineered Quartz Surfaces',
+      origin: 'Global',
       icon: Sparkles,
       image: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=400&q=80',
-      spec: '18mm Calibrated Slab'
+      spec: 'Non-Porous Calacatta'
+    },
+    {
+      name: "MITTAL'S FABRICS",
+      category: 'Curtains & Drapes',
+      origin: 'India',
+      icon: Sparkles,
+      image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80',
+      spec: 'Luxury Sheer & Blackout'
+    },
+    {
+      name: 'DARPAN FABRICS',
+      category: 'Furnishings & Upholstery',
+      origin: 'India',
+      icon: Award,
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80',
+      spec: 'Bespoke Velvets & Linens'
     },
     {
       name: 'SAINT-GOBAIN',
@@ -59,14 +99,6 @@ export const MaterialBrands: React.FC = () => {
       icon: Compass,
       image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=400&q=80',
       spec: 'Acoustic Tinted Series'
-    },
-    {
-      name: 'GREENLAM',
-      category: 'Silk Matte Acrylics',
-      origin: 'Global',
-      icon: Sparkles,
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80',
-      spec: 'Anti-Bacterial 1.2mm'
     },
     {
       name: 'ASIAN PAINTS',
@@ -92,18 +124,18 @@ export const MaterialBrands: React.FC = () => {
               <span>Certified Grade-A Sourcing</span>
             </div>
             <h2 className="font-serif-luxury text-2xl sm:text-3xl font-bold tracking-tight text-[#111111]">
-              Direct Global Partners.{' '}
-              <span className="gold-gradient-text italic">Zero Counterfeit Hardware.</span>
+              Our Brand Partners.{' '}
+              <span className="gold-gradient-text italic">Certified Global & Indian Ateliers.</span>
             </h2>
           </div>
 
           <p className="text-xs text-gray-600 font-normal max-w-md leading-relaxed self-start md:self-end">
-            100% factory-machined with authentic European fittings, barcode-verified BWP marine plywood, and manufacturer warranties.
+            100% factory-machined with authentic European fittings, barcode-verified BWP marine plywood, designer soft furnishings, and manufacturer warranties.
           </p>
         </div>
 
-        {/* Compact 8-Item Material Cards with Images & Icons */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+        {/* Compact 12-Item Material Cards with Images & Icons */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
           {partners.map((p, i) => {
             const Icon = p.icon;
             return (
@@ -131,7 +163,7 @@ export const MaterialBrands: React.FC = () => {
 
                 {/* Bottom: Brand Logo Typography & Spec */}
                 <div className="relative z-10 space-y-1">
-                  <h4 className="font-serif-luxury text-sm font-bold text-white group-hover:text-[#fae19c] transition-colors leading-tight tracking-wide">
+                  <h4 className="font-serif-luxury text-xs sm:text-sm font-bold text-white group-hover:text-[#fae19c] transition-colors leading-tight tracking-wide">
                     {p.name}
                   </h4>
                   <p className="text-[10px] text-gray-200 font-medium truncate">

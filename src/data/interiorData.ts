@@ -623,8 +623,13 @@ export const TRUSTED_BRANDS = [
   { name: 'Hettich', category: 'Precision Hardware', logo: 'Hettich' },
   { name: 'Blum Austria', category: 'Servo Lift Systems', logo: 'blum' },
   { name: 'Century Ply', category: 'IS:710 Marine Plywood', logo: 'CENTURYPLY' },
+  { name: 'DuroPly', category: 'IS:710 BWP Plywood & Veneers', logo: 'DUROPLY' },
+  { name: 'Advance Laminates', category: 'Decorative & Acrylic Laminates', logo: 'ADVANCE LAMINATES' },
   { name: 'Greenlam', category: 'Architectural Laminates', logo: 'GREENLAM' },
+  { name: 'Quantra Quartz', category: 'Engineered Quartz Surfaces', logo: 'QUANTRA QUARTZ' },
   { name: 'Premium Quartz & Onyx', category: 'Engineered & Exotic Stone', logo: 'QUARTZ & ONYX' },
+  { name: 'Mittal\'s Fabrics', category: 'Curtains & Drapes Furnishings', logo: 'MITTAL\'S FABRICS' },
+  { name: 'Darpan Fabrics', category: 'Luxury Furnishings & Upholstery', logo: 'DARPAN FABRICS' },
   { name: 'Saint-Gobain', category: 'Tinted & Fluted Glass', logo: 'SAINT-GOBAIN' },
   { name: 'Asian Paints', category: 'Royale Luxury Emulsion', logo: 'ASIAN PAINTS' }
 ];

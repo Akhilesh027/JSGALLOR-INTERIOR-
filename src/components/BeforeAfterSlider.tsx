@@ -286,14 +286,21 @@ export const BeforeAfterSlider: React.FC = () => {
             </div>
           </div>
 
-          {/* Dynamic Technical Guarantees for the Active Category */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          {/* Dynamic Technical Guarantees for the Active Category - Increased Font Size */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {activeCategory.guarantees.map((guarantee, i) => (
-              <div key={i} className="p-5 rounded-2xl bg-white border border-[#e8e2d9] shadow-sm flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#8c6b38] shrink-0 mt-0.5" />
+              <div 
+                key={i} 
+                className="p-6 sm:p-7 rounded-2xl bg-white border border-[#e2d8ca] shadow-md hover:shadow-lg hover:border-[#c5a880] transition-all flex items-start gap-4 group"
+              >
+                <div className="w-9 h-9 rounded-xl bg-[#c5a880]/15 border border-[#c5a880]/30 flex items-center justify-center text-[#8c6b38] shrink-0 mt-0.5 group-hover:bg-[#c5a880] group-hover:text-black transition-colors">
+                  <CheckCircle2 className="w-5 h-5" />
+                </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#111111]">{guarantee.title}</h4>
-                  <p className="text-xs text-gray-600 mt-1 font-normal leading-relaxed">
+                  <h4 className="text-lg sm:text-xl font-bold text-[#111111] tracking-tight">
+                    {guarantee.title}
+                  </h4>
+                  <p className="text-sm sm:text-[15px] text-gray-700 mt-2 font-normal leading-relaxed">
                     {guarantee.description}
                   </p>
                 </div>

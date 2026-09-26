@@ -140,7 +140,7 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
         </div>
 
         {/* ========================================================================= */}
-        {/* DYNAMIC EXPANDING LOUVER PAVILION (EXACT ORIGINAL STYLE, ADAPTIVE HEIGHT) */}
+        {/* DYNAMIC EXPANDING LOUVER PAVILION (BRIGHT & LUMINOUS LUXURY STYLING)      */}
         {/* ========================================================================= */}
         <div className="hidden lg:flex min-h-[520px] gap-4 items-stretch mb-8">
           {tiers.map((t) => {
@@ -150,24 +150,25 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
               return (
                 <div
                   key={t.id}
-                  className="flex-[3.2] relative rounded-3xl overflow-hidden border-2 border-[#8c6b38] shadow-2xl transition-all duration-500 flex flex-col justify-between p-8 lg:p-9 group ring-1 ring-[#8c6b38]/30 bg-white"
+                  className="flex-[3.2] relative rounded-3xl overflow-hidden border-2 border-[#c5a880] shadow-2xl transition-all duration-500 flex flex-col justify-between p-8 lg:p-9 group ring-2 ring-[#c5a880]/40 bg-neutral-900"
                 >
-                  {/* Background Cinematic Image */}
+                  {/* Background Cinematic Image - Brighter & Clearer */}
                   <img
                     src={t.image}
                     alt={t.name}
-                    className="absolute inset-0 w-full h-full object-cover filter brightness-[0.25] scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="absolute inset-0 w-full h-full object-cover filter brightness-[0.75] contrast-[1.05] scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/85 to-black/60" />
+                  {/* Lighter, softer overlay to preserve image brightness while keeping text ultra-readable */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/30" />
 
                   {/* Top Bar: Code & Badges */}
                   <div className="relative z-10 flex flex-wrap items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs text-[#fae19c] font-bold px-3 py-1 rounded-full bg-black/75 border border-[#c5a880]/40">
+                      <span className="font-mono text-xs text-[#fae19c] font-bold px-3 py-1 rounded-full bg-black/60 border border-[#c5a880]/50 backdrop-blur-md shadow-md">
                         {t.code}
                       </span>
                       {t.badge && (
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[#c5a880] to-[#b8976b] text-black text-[11px] font-bold uppercase tracking-wider shadow">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[#c5a880] to-[#b8976b] text-black text-[11px] font-bold uppercase tracking-wider shadow-md">
                           <Sparkles className="w-3 h-3 text-black" />
                           <span>{t.badge}</span>
                         </span>
@@ -175,11 +176,11 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
                     </div>
 
                     <div className="flex items-center gap-3 text-xs font-medium">
-                      <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[#fae19c] border border-white/15 text-xs font-mono">
+                      <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[#fae19c] border border-white/20 text-xs font-mono shadow-sm">
                         <Clock className="w-3.5 h-3.5 text-[#fae19c]" />
                         {t.duration}
                       </span>
-                      <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-gray-200 border border-white/15 text-xs font-mono">
+                      <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-emerald-300 border border-white/20 text-xs font-mono shadow-sm">
                         <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                         {t.warranty}
                       </span>
@@ -189,30 +190,30 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
                   {/* Middle Content: Title, Philosophy & Rich Specs Grid */}
                   <div className="relative z-10 my-6 space-y-5">
                     <div>
-                      <h3 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                      <h3 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-white tracking-tight drop-shadow-md">
                         {t.name}
                       </h3>
-                      <p className="text-[#fae19c] text-xs uppercase tracking-widest font-semibold mt-1">
+                      <p className="text-[#fae19c] text-xs uppercase tracking-widest font-bold mt-1 drop-shadow-sm">
                         {t.tagline}
                       </p>
-                      <p className="text-gray-200 text-xs sm:text-sm font-normal mt-2 max-w-2xl leading-relaxed">
+                      <p className="text-gray-100 text-xs sm:text-sm font-normal mt-2 max-w-2xl leading-relaxed drop-shadow-sm">
                         {t.philosophy}
                       </p>
                     </div>
 
-                    {/* Rich Architectural Specifications Grid (2 Columns, Cleanly Formatted) */}
+                    {/* Rich Architectural Specifications Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1">
                       {t.specs.map((spec, i) => (
                         <div
                           key={i}
-                          className="flex items-start gap-2.5 px-3.5 py-2.5 rounded-xl bg-black/75 border border-white/15 text-xs backdrop-blur-md"
+                          className="flex items-start gap-2.5 px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/20 hover:border-[#c5a880]/60 text-xs backdrop-blur-md shadow-sm transition-colors"
                         >
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                           <div className="space-y-0.5">
                             <span className="text-[10px] font-mono text-[#fae19c] uppercase tracking-wider block font-bold">
                               {spec.label}
                             </span>
-                            <span className="text-gray-200 font-normal leading-snug block">
+                            <span className="text-gray-100 font-normal leading-snug block">
                               {spec.detail}
                             </span>
                           </div>
@@ -222,17 +223,17 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
                   </div>
 
                   {/* Bottom Action Bar */}
-                  <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-white/20">
+                  <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-white/25">
                     {/* Dedicated Standalone Portal Launcher */}
                     <a
                       href={t.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/link inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-black/80 hover:bg-[#c5a880] text-white hover:text-black border border-[#c5a880]/50 hover:border-[#c5a880] transition-all text-xs font-mono"
+                      className="group/link inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-black/70 hover:bg-[#c5a880] text-white hover:text-black border border-[#c5a880]/60 hover:border-[#c5a880] backdrop-blur-md transition-all text-xs font-mono shadow-sm"
                     >
                       <Globe className="w-3.5 h-3.5 text-[#fae19c] group-hover/link:text-black" />
                       <span>{t.displayUrl}</span>
-                      <ExternalLink className="w-3 h-3 ml-0.5 opacity-70" />
+                      <ExternalLink className="w-3 h-3 ml-0.5 opacity-80" />
                     </a>
 
                     {/* Book 3D Walkthrough CTA */}
@@ -241,7 +242,7 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
                         onSelectTier(t.id);
                         onOpenConsultation();
                       }}
-                      className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#c5a880] via-[#d4ba96] to-[#b8976b] text-black font-bold text-xs uppercase tracking-wider shadow-lg hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
+                      className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#c5a880] via-[#d4ba96] to-[#b8976b] text-black font-bold text-xs uppercase tracking-wider shadow-xl hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
                     >
                       <span>Select Tier & Book 3D Session</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -251,7 +252,7 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
               );
             }
 
-            // Inactive Compressed Louver Blade
+            // Inactive Compressed Louver Blade - Brighter & More Inviting
             return (
               <div
                 key={t.id}
@@ -259,41 +260,41 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
                   setActiveTierId(t.id);
                   onSelectTier(t.id);
                 }}
-                className="flex-1 relative rounded-3xl overflow-hidden border border-[#e8e2d9] hover:border-[#8c6b38] bg-white cursor-pointer transition-all duration-500 flex flex-col justify-between p-6 group hover:shadow-lg shadow-sm"
+                className="flex-1 relative rounded-3xl overflow-hidden border border-[#e2d8ca] hover:border-[#c5a880] bg-neutral-900 cursor-pointer transition-all duration-500 flex flex-col justify-between p-6 group hover:shadow-xl shadow-md"
               >
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="absolute inset-0 w-full h-full object-cover filter brightness-[0.25] group-hover:brightness-[0.35] transition-all duration-500"
+                  className="absolute inset-0 w-full h-full object-cover filter brightness-[0.65] group-hover:brightness-[0.8] contrast-[1.05] transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/95" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/85" />
 
                 {/* Top: Code & Popular Indicator */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="font-mono text-xs text-gray-300 group-hover:text-[#fae19c] font-bold">
+                  <span className="font-mono text-xs text-white group-hover:text-[#fae19c] font-bold px-2 py-0.5 rounded bg-black/50 border border-white/15">
                     {t.code}
                   </span>
                   {t.popular && (
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#c5a880] shadow-[0_0_8px_#c5a880]" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#c5a880] shadow-[0_0_10px_#c5a880]" />
                   )}
                 </div>
 
                 {/* Center: Vertical Aesthetic Title & Tagline */}
                 <div className="relative z-10 my-auto text-center space-y-2">
-                  <h4 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#fae19c] transition-colors leading-tight">
+                  <h4 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#fae19c] transition-colors leading-tight drop-shadow-md">
                     {t.name}
                   </h4>
-                  <p className="text-[11px] text-[#fae19c] font-mono uppercase tracking-wider font-semibold">
+                  <p className="text-[11px] text-[#fae19c] font-mono uppercase tracking-wider font-bold">
                     {t.duration}
                   </p>
-                  <p className="text-[11px] text-gray-300 font-normal truncate max-w-[130px] mx-auto">
+                  <p className="text-[11px] text-gray-200 font-normal truncate max-w-[130px] mx-auto drop-shadow-sm">
                     {t.tagline}
                   </p>
                 </div>
 
                 {/* Bottom: Click to Expand */}
-                <div className="relative z-10 pt-3 border-t border-white/15 text-center">
-                  <span className="text-[11px] text-gray-300 group-hover:text-[#fae19c] uppercase tracking-widest font-bold flex items-center justify-center gap-1 transition-colors">
+                <div className="relative z-10 pt-3 border-t border-white/20 text-center">
+                  <span className="text-[11px] text-gray-100 group-hover:text-[#fae19c] uppercase tracking-widest font-bold flex items-center justify-center gap-1 transition-colors drop-shadow-sm">
                     <span>Unfold</span>
                     <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -304,58 +305,58 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
         </div>
 
         {/* ========================================================================= */}
-        {/* MOBILE / TABLET VIEW: REFINED INTERACTIVE CARD                            */}
+        {/* MOBILE / TABLET VIEW: REFINED BRIGHT INTERACTIVE CARD                     */}
         {/* ========================================================================= */}
         <div className="lg:hidden space-y-4 mb-8">
-          <div className="relative rounded-3xl overflow-hidden border border-[#e8e2d9] shadow-xl p-6 sm:p-7 bg-white">
+          <div className="relative rounded-3xl overflow-hidden border-2 border-[#c5a880] shadow-xl p-6 sm:p-7 bg-neutral-900">
             <img
               src={activeTier.image}
               alt={activeTier.name}
-              className="absolute inset-0 w-full h-full object-cover filter brightness-[0.25]"
+              className="absolute inset-0 w-full h-full object-cover filter brightness-[0.75] contrast-[1.05]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/85 to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/30" />
 
             <div className="relative z-10 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs text-[#fae19c] font-bold px-3 py-1 rounded-full bg-black/70 border border-[#c5a880]/40">
+                <span className="font-mono text-xs text-[#fae19c] font-bold px-3 py-1 rounded-full bg-black/60 border border-[#c5a880]/50">
                   {activeTier.code}
                 </span>
-                <span className="text-xs text-[#fae19c] font-semibold font-mono flex items-center gap-1.5 bg-black/70 px-3 py-1 rounded-full border border-white/10">
+                <span className="text-xs text-[#fae19c] font-semibold font-mono flex items-center gap-1.5 bg-black/60 px-3 py-1 rounded-full border border-white/20">
                   <Clock className="w-3.5 h-3.5 text-[#fae19c]" />
                   {activeTier.duration}
                 </span>
               </div>
 
               <div>
-                <h3 className="font-serif-luxury text-2xl font-bold text-white">
+                <h3 className="font-serif-luxury text-2xl font-bold text-white drop-shadow-md">
                   {activeTier.name}
                 </h3>
-                <p className="text-xs text-[#fae19c] uppercase tracking-wider font-semibold mt-0.5">
+                <p className="text-xs text-[#fae19c] uppercase tracking-wider font-bold mt-0.5">
                   {activeTier.tagline}
                 </p>
-                <p className="text-xs text-gray-200 font-normal mt-1.5">
+                <p className="text-xs text-gray-100 font-normal mt-1.5">
                   {activeTier.philosophy}
                 </p>
               </div>
 
               <div className="space-y-2">
                 {activeTier.specs.map((spec, i) => (
-                  <div key={i} className="flex items-start gap-2 p-2.5 rounded-xl bg-black/75 border border-white/10 text-xs">
+                  <div key={i} className="flex items-start gap-2 p-2.5 rounded-xl bg-black/60 border border-white/20 text-xs backdrop-blur-md">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                     <div>
                       <span className="text-[10px] font-mono text-[#fae19c] uppercase block font-bold">{spec.label}</span>
-                      <span className="text-gray-200">{spec.detail}</span>
+                      <span className="text-gray-100">{spec.detail}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-3 border-t border-white/15 space-y-2.5">
+              <div className="pt-3 border-t border-white/20 space-y-2.5">
                 <a
                   href={activeTier.websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 rounded-xl bg-black/80 border border-[#c5a880]/50 text-white text-xs font-mono flex items-center justify-center gap-2"
+                  className="w-full py-3 rounded-xl bg-black/70 border border-[#c5a880]/50 text-white text-xs font-mono flex items-center justify-center gap-2"
                 >
                   <Globe className="w-3.5 h-3.5 text-[#fae19c]" />
                   <span>Visit {activeTier.displayUrl}</span>
@@ -367,7 +368,7 @@ export const TierComparison: React.FC<TierComparisonProps> = ({ onSelectTier, on
                     onSelectTier(activeTier.id);
                     onOpenConsultation();
                   }}
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#c5a880] to-[#b8976b] text-black text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#c5a880] to-[#b8976b] text-black text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl"
                 >
                   <span>Select & Book 3D Walkthrough</span>
                   <ArrowRight className="w-3.5 h-3.5" />

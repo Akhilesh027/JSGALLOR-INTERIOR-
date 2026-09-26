@@ -77,35 +77,36 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
         {/* ASYMMETRICAL ARCHITECTURAL EXHIBITION STAGE (Master Spotlight + Satellite Wall) */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-12">
-          {/* Master Spotlight Showcase (7 Cols on Desktop) */}
-          <div className="lg:col-span-7 relative min-h-[500px] sm:min-h-[580px] rounded-3xl overflow-hidden border border-[#e8e2d9] shadow-2xl group flex flex-col justify-between p-7 sm:p-10 bg-black">
-            {/* Cinematic Background Image */}
+          {/* Master Spotlight Showcase (7 Cols on Desktop) - Brighter & Real Images */}
+          <div className="lg:col-span-7 relative min-h-[500px] sm:min-h-[580px] rounded-3xl overflow-hidden border-2 border-[#c5a880]/60 shadow-2xl group flex flex-col justify-between p-7 sm:p-10 bg-neutral-900">
+            {/* Cinematic Background Image - Bright & Crystal Clear */}
             <img
               key={masterProject.id}
               src={masterProject.image}
               alt={masterProject.title}
-              className="absolute inset-0 w-full h-full object-cover filter brightness-[0.45] scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
+              className="absolute inset-0 w-full h-full object-cover filter brightness-[0.85] contrast-[1.05] scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/30" />
+            {/* Lighter, softer overlay so the real room image remains bright and clearly visible */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent" />
 
             {/* Top HUD: Index, Locality & Tier */}
             <div className="relative z-10 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2.5">
-                <span className="font-mono text-xs text-[#fae19c] font-bold tracking-widest px-3 py-1.5 rounded-full bg-black/70 border border-[#c5a880]/40 backdrop-blur-md">
+                <span className="font-mono text-xs text-[#fae19c] font-bold tracking-widest px-3 py-1.5 rounded-full bg-black/60 border border-[#c5a880]/50 backdrop-blur-md shadow-md">
                   RESIDENCE 0{activeProjectIndex + 1}
                 </span>
-                <span className="text-xs px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-amber-200 border border-white/20 font-medium">
+                <span className="text-xs px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md text-[#fae19c] border border-white/20 font-bold shadow-sm">
                   {masterProject.tierName}
                 </span>
               </div>
 
               <div className="flex items-center gap-2 text-xs font-mono">
-                <span className="flex items-center gap-1 bg-black/70 px-3 py-1.5 rounded-full border border-white/10 text-gray-200">
+                <span className="flex items-center gap-1.5 bg-black/60 px-3 py-1.5 rounded-full border border-white/20 text-white backdrop-blur-md shadow-sm">
                   <MapPin className="w-3.5 h-3.5 text-[#fae19c]" />
                   {masterProject.locality}
                 </span>
-                <span className="flex items-center gap-1 bg-black/70 px-3 py-1.5 rounded-full border border-white/10 text-emerald-400 font-semibold">
-                  <Clock className="w-3.5 h-3.5" />
+                <span className="flex items-center gap-1.5 bg-black/60 px-3 py-1.5 rounded-full border border-white/20 text-emerald-300 font-bold backdrop-blur-md shadow-sm">
+                  <Clock className="w-3.5 h-3.5 text-emerald-400" />
                   {masterProject.duration}
                 </span>
               </div>
@@ -114,34 +115,34 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
             {/* Bottom Content Dossier */}
             <div className="relative z-10 space-y-4 pt-16">
               <div>
-                <span className="text-xs uppercase font-mono tracking-widest text-[#fae19c] font-bold block mb-1">
+                <span className="text-xs uppercase font-mono tracking-widest text-[#fae19c] font-bold block mb-1 drop-shadow-sm">
                   {masterProject.category} Architectural Curation
                 </span>
-                <h3 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+                <h3 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight drop-shadow-md">
                   {masterProject.title}
                 </h3>
-                <p className="text-gray-200 text-xs sm:text-sm font-light mt-2 max-w-xl leading-relaxed line-clamp-2">
+                <p className="text-gray-100 text-xs sm:text-sm font-normal mt-2 max-w-xl leading-relaxed line-clamp-2 drop-shadow-sm">
                   {masterProject.description}
                 </p>
               </div>
 
               {/* Master Specs Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-white/15 text-xs text-gray-200">
-                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
-                  <div className="text-[10px] text-gray-400 uppercase font-mono">Area</div>
-                  <div className="font-bold text-white">{masterProject.sqft}</div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-white/20 text-xs text-gray-100">
+                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
+                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Area</div>
+                  <div className="font-bold text-white text-sm">{masterProject.sqft}</div>
                 </div>
-                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
-                  <div className="text-[10px] text-gray-400 uppercase font-mono">Typology</div>
-                  <div className="font-bold text-white">{masterProject.category}</div>
+                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
+                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Typology</div>
+                  <div className="font-bold text-white text-sm">{masterProject.category}</div>
                 </div>
-                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
-                  <div className="text-[10px] text-gray-400 uppercase font-mono">Handover</div>
-                  <div className="font-bold text-emerald-400">{masterProject.duration}</div>
+                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
+                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Handover</div>
+                  <div className="font-bold text-emerald-300 text-sm">{masterProject.duration}</div>
                 </div>
-                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
-                  <div className="text-[10px] text-gray-400 uppercase font-mono">Status</div>
-                  <div className="font-bold text-[#fae19c]">Handed Over</div>
+                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
+                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Status</div>
+                  <div className="font-bold text-[#fae19c] text-sm">Handed Over</div>
                 </div>
               </div>
 
@@ -149,14 +150,14 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <button
                   onClick={() => navigate('/portfolio')}
-                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#c5a880] via-[#e2cfb4] to-[#b8976b] text-black font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer shadow-md"
+                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#c5a880] via-[#e2cfb4] to-[#b8976b] text-black font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer shadow-xl"
                 >
                   <span>Explore In Full Portfolio</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
                 <button
                   onClick={onOpenConsultation}
-                  className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider border border-white/20 transition-all cursor-pointer"
+                  className="px-5 py-3 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs uppercase tracking-wider border border-white/30 backdrop-blur-md transition-all cursor-pointer shadow-md"
                 >
                   Inquire Similar
                 </button>
@@ -164,7 +165,7 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
             </div>
           </div>
 
-          {/* Secondary Satellite Stack (5 Cols on Desktop) */}
+          {/* Secondary Satellite Stack (5 Cols on Desktop) - Brighter & Crisper */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             {satelliteProjects.map((sat, idx) => (
               <div
@@ -173,21 +174,21 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
                   const targetIdx = filteredProjects.findIndex((p) => p.id === sat.id);
                   if (targetIdx >= 0) setActiveProjectIndex(targetIdx);
                 }}
-                className="group relative flex-1 min-h-[160px] rounded-3xl overflow-hidden border border-[#e8e2d9] hover:border-[#8c6b38] cursor-pointer transition-all duration-500 flex flex-col justify-between p-5 bg-white shadow-md hover:shadow-xl"
+                className="group relative flex-1 min-h-[160px] rounded-3xl overflow-hidden border border-[#e2d8ca] hover:border-[#c5a880] cursor-pointer transition-all duration-500 flex flex-col justify-between p-5 bg-neutral-900 shadow-md hover:shadow-2xl"
               >
                 <img
                   src={sat.image}
                   alt={sat.title}
-                  className="absolute inset-0 w-full h-full object-cover filter brightness-[0.4] group-hover:brightness-[0.5] group-hover:scale-105 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover filter brightness-[0.75] group-hover:brightness-[0.9] contrast-[1.05] group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
 
                 {/* Top Badge */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="font-mono text-[10px] text-[#fae19c] font-bold px-2.5 py-1 rounded-full bg-black/60 border border-white/10">
+                  <span className="font-mono text-[10px] text-[#fae19c] font-bold px-2.5 py-1 rounded-full bg-black/60 border border-white/20 backdrop-blur-md">
                     SATELLITE 0{idx + 1}
                   </span>
-                  <span className="text-[10px] uppercase font-mono text-gray-200 bg-black/60 px-2.5 py-1 rounded-full border border-white/10">
+                  <span className="text-[10px] uppercase font-mono font-bold text-white bg-black/60 px-2.5 py-1 rounded-full border border-white/20 backdrop-blur-md">
                     {sat.category}
                   </span>
                 </div>
@@ -195,10 +196,10 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
                 {/* Bottom Details on hover */}
                 <div className="relative z-10 w-full flex items-end justify-between">
                   <div>
-                    <h4 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#fae19c] transition-colors">
+                    <h4 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#fae19c] transition-colors drop-shadow-md">
                       {sat.title}
                     </h4>
-                    <p className="text-xs text-gray-300 flex items-center gap-1.5 mt-0.5">
+                    <p className="text-xs text-gray-100 flex items-center gap-1.5 mt-0.5 drop-shadow-sm font-medium">
                       <MapPin className="w-3 h-3 text-[#fae19c]" />
                       <span>{sat.locality}</span>
                       <span>•</span>
@@ -206,7 +207,7 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
                     </p>
                   </div>
 
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#fae19c] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1 shrink-0">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#fae19c] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1 shrink-0 bg-black/60 px-3 py-1 rounded-full border border-[#c5a880]/50 backdrop-blur-md">
                     <span>Inspect</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
