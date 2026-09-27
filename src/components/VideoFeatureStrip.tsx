@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Sparkles, ArrowRight, Utensils, Sofa, BedDouble, CheckCircle2, ShieldCheck, Cpu } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
+import { BackgroundVideo } from './BackgroundVideo';
+
 interface VideoFeatureStripProps {
   onOpenConsultation: () => void;
 }
@@ -33,29 +35,14 @@ export const VideoFeatureStrip: React.FC<VideoFeatureStripProps> = ({ onOpenCons
 
   return (
     <section className="relative py-28 overflow-hidden bg-[#090a0f] text-white border-b border-white/10">
-      {/* Background Video Layer - YouTube embed with 0 controls & autoplay */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <iframe
-          src="https://www.youtube.com/embed/ACZBsOsmA8Y?autoplay=1&mute=1&loop=1&playlist=ACZBsOsmA8Y&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1"
-          title="Architectural Living Showcase Video"
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '180vw',
-            height: '180vh',
-            minWidth: '100%',
-            minHeight: '100%',
-            transform: 'translate(-50%, -50%)',
-            border: 'none',
-            pointerEvents: 'none',
-            filter: 'brightness(0.72) contrast(1.08)'
-          }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#090a0f]/85 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090a0f]/75 via-transparent to-[#090a0f]/75" />
-      </div>
+      {/* Background Video Layer without any player buttons or loading flash */}
+      <BackgroundVideo
+        videoId="ACZBsOsmA8Y"
+        title="Architectural Living Showcase Video"
+        brightness={0.72}
+        contrast={1.08}
+        overlayOpacity="bg-black/25"
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl space-y-7">

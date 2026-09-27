@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight, Sparkles, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
+import { BackgroundVideo } from './BackgroundVideo';
+
 interface HeroProps {
   onOpenConsultation: () => void;
 }
@@ -11,32 +13,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation }) => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-24 pb-20 overflow-hidden bg-[#090a0f] text-white">
-      {/* Full-Bleed Background Video with YouTube Embed (0 controls, autoplay, loop) */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <iframe
-          src="https://www.youtube.com/embed/e7jF7aGMZHw?autoplay=1&mute=1&loop=1&playlist=e7jF7aGMZHw&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1"
-          title="Hero Architectural Showcase Video"
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '180vw',
-            height: '180vh',
-            minWidth: '100%',
-            minHeight: '100%',
-            transform: 'translate(-50%, -50%)',
-            border: 'none',
-            pointerEvents: 'none',
-            filter: 'brightness(0.72) contrast(1.08)'
-          }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        />
-
-        {/* Soft Vignette Overlays with Reduced Opacity */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090a0f]/80 via-transparent to-black/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/35" />
-        <div className="absolute inset-0 bg-black/15" />
-      </div>
+      {/* Full-Bleed Background Video without any player buttons or loading flash */}
+      <BackgroundVideo
+        videoId="e7jF7aGMZHw"
+        title="Hero Architectural Showcase Video"
+        brightness={0.75}
+        contrast={1.08}
+        overlayOpacity="bg-black/15"
+      />
 
       {/* Luxury Cinematic Live Indicator */}
       <div className="absolute top-28 right-6 sm:right-12 z-20 hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 border border-white/15 backdrop-blur-md text-[11px] font-medium tracking-wider text-gray-300">

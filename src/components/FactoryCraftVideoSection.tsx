@@ -2,6 +2,8 @@ import React from 'react';
 import { Sparkles, ArrowRight, Layers, Palette, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
+import { BackgroundVideo } from './BackgroundVideo';
+
 interface FactoryCraftVideoSectionProps {
   onOpenConsultation: () => void;
 }
@@ -11,30 +13,14 @@ export const FactoryCraftVideoSection: React.FC<FactoryCraftVideoSectionProps> =
 
   return (
     <section id="craft" className="relative py-28 overflow-hidden bg-[#090a0f] text-white border-y border-white/10">
-      {/* Background Video Layer - YouTube embed with 0 controls & autoplay */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <iframe
-          src="https://www.youtube.com/embed/PZ0qH-7wsbs?autoplay=1&mute=1&loop=1&playlist=PZ0qH-7wsbs&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1"
-          title="Carpentry Finishes Showcase Video"
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '180vw',
-            height: '180vh',
-            minWidth: '100%',
-            minHeight: '100%',
-            transform: 'translate(-50%, -50%)',
-            border: 'none',
-            pointerEvents: 'none',
-            filter: 'brightness(0.72) contrast(1.08)'
-          }}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        />
-        {/* Soft Vignettes */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#090a0f]/85 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090a0f]/75 via-transparent to-[#090a0f]/75" />
-      </div>
+      {/* Background Video Layer without any player buttons or loading flash */}
+      <BackgroundVideo
+        videoId="PZ0qH-7wsbs"
+        title="Carpentry Finishes Showcase Video"
+        brightness={0.72}
+        contrast={1.08}
+        overlayOpacity="bg-black/25"
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl space-y-7">
