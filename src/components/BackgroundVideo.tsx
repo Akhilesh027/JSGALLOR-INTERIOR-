@@ -90,9 +90,7 @@ export const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
         />
         {/* Absolute Non-Interactive Transparent Shield */}
         <div className="absolute inset-0 z-10 pointer-events-auto cursor-default bg-transparent" />
-        <div className={`absolute inset-0 z-10 ${overlayOpacity}`} />
-        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#090a0f] via-transparent to-black/40 pointer-events-none" />
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/40 via-transparent to-black/40 pointer-events-none" />
+        <div className={`absolute inset-0 z-10 ${overlayOpacity} pointer-events-none`} />
       </div>
     );
   }
@@ -220,10 +218,8 @@ export const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
       {/* Physical Click & Interaction Shield: Intercepts all mouse/touch events so YouTube HUD can never trigger */}
       <div className="absolute inset-0 z-10 pointer-events-auto cursor-default bg-transparent" />
 
-      {/* Luxury Vignettes & Atmosphere Gradients */}
+      {/* Clean Transparent Overlay */}
       <div className={`absolute inset-0 z-10 ${overlayOpacity} pointer-events-none`} />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#090a0f] via-transparent to-black/40 pointer-events-none" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/40 via-transparent to-black/40 pointer-events-none" />
     </div>
   );
 };
