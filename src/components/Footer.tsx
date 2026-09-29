@@ -83,22 +83,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               </a>
             </div>
 
-            {/* Experience Centers & Showrooms */}
+            {/* Experience Center */}
             <div className="pt-2 border-t border-[#e8e2d9] space-y-2 text-xs text-gray-600">
               <div className="font-bold text-[#8c6b38] uppercase tracking-wider text-[10px]">
-                Experience Centers (Interiors & Furniture):
+                Experience Center & Office:
               </div>
               <div>
-                <span className="font-semibold text-gray-900 block text-[11px]">Banjara Hills Showroom:</span>
-                <span className="text-[11px]">Road No. 12, Banjara Hills, Hyderabad – 500034</span>
-              </div>
-              <div>
-                <span className="font-semibold text-gray-900 block text-[11px]">Madhapur Design HQ:</span>
-                <span className="text-[11px]">WorkFlo Bizness Square, Jubilee Enclave, Madhapur – 500081</span>
-              </div>
-              <div>
-                <span className="font-semibold text-gray-900 block text-[11px]">Uppal Central Center:</span>
-                <span className="text-[11px]">Main Road, Near Metro Pillar 812, Uppal – 500039</span>
+                <span className="text-[11px] leading-relaxed block text-gray-800">
+                  Road No 1, Bagayath layout, 3rd floor, Plot 288, Uppal, Hyderabad, Telangana 500039
+                </span>
               </div>
             </div>
 

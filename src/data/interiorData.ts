@@ -537,56 +537,17 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
 
 export const EXPERIENCE_CENTERS: ExperienceCenter[] = [
   {
-    id: 'ec-banjara',
-    name: 'Banjara Hills Flagship Showroom & Design Lounge',
-    city: 'Hyderabad',
-    area: 'Road No. 12, Banjara Hills',
-    address: 'Road No. 12, Banjara Hills, Hyderabad, Telangana – 500034',
-    phone: '+91 81436 78491',
-    email: 'sales@jsgallor.com',
-    timing: 'Mon – Sun: 10:30 AM – 8:30 PM',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
-    mapsUrl: 'https://maps.google.com/?q=Road+No+12+Banjara+Hills+Hyderabad',
-    features: ['Curated Luxury Furniture Gallery', 'Italian Marble & Veneer Atelier', 'Private Architect Consultation Suites']
-  },
-  {
-    id: 'ec-madhapur',
-    name: 'Corporate HQ & Interior Architecture Studio',
-    city: 'Hyderabad',
-    area: 'Jubilee Enclave, Madhapur',
-    address: 'WorkFlo Bizness Square, 4th Floor, Jubilee Enclave, HITEC City, Madhapur, Hyderabad, Telangana – 500081',
-    phone: '+91 81436 78491',
-    email: 'corporate@jsgallor.com',
-    timing: 'Mon – Sat: 9:00 AM – 8:00 PM',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
-    mapsUrl: 'https://maps.google.com/?q=WorkFlo+Bizness+Square+Madhapur+Hyderabad',
-    features: ['Turnkey Interior Design HQ', 'Virtual VR 3D Walkthrough Studio', 'Lighting & Smart Home Automation Lab']
-  },
-  {
     id: 'ec-uppal',
-    name: 'Central Experience Center & Showroom / Warehouse',
+    name: 'Experience Center & Office',
     city: 'Hyderabad',
     area: 'Uppal',
-    address: 'JS GALLOR Experience Center & Central Warehouse, Main Road, Near Metro Station Pillar 812, Uppal, Hyderabad, Telangana – 500039',
-    phone: '+91 81436 78491',
-    email: 'uppal@jsgallor.com',
+    address: 'Road No 1, Bagayath layout, 3rd floor, Plot 288, Uppal, Hyderabad, Telangana 500039',
+    phone: '+91 81436 78491 / +91 70758 48516',
+    email: 'support@jsgallor.com',
     timing: 'Mon – Sun: 10:00 AM – 8:30 PM',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-    mapsUrl: 'https://maps.google.com/?q=Uppal+Hyderabad+Telangana',
-    features: ['Live Modular Kitchen & Wardrobe Mockups', 'Solid Wood & Sofa Furniture Display', 'Live Hardware Rig (Hafele, Hettich & Blum)']
-  },
-  {
-    id: 'ec-indiranagar',
-    name: 'Indiranagar Experience Pavilion & Studio',
-    city: 'Bangalore',
-    area: 'Indiranagar',
-    address: '840, 100ft Road, HAL 2nd Stage, Indiranagar, Bengaluru, Karnataka – 560038',
-    phone: '+91 81436 78491',
-    email: 'bangalore@jsgallor.com',
-    timing: 'Tue – Sun: 10:00 AM – 8:00 PM',
-    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80',
-    mapsUrl: 'https://maps.google.com/?q=Indiranagar+Bengaluru+Karnataka',
-    features: ['Contemporary Modular & Furniture Systems', 'Acoustic Louvers & Lighting Booth', 'Senior Architect Consultations']
+    mapsUrl: 'https://maps.google.com/?q=Road+No+1+Bagayath+layout+Plot+288+Uppal+Hyderabad+Telangana+500039',
+    features: ['Live Modular Kitchen & Wardrobe Mockups', 'Solid Wood & Luxury Living Displays', 'Live Hardware Rig (Hafele, Hettich & Blum)']
   }
 ];
 
@@ -614,7 +575,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     category: 'Process',
     question: 'Can I visit the factory or see materials before confirming?',
-    answer: 'Absolutely. We encourage homeowners to visit our Corporate Office in Madhapur (Workflo Bizness Square), Uppal Showroom, or Indiranagar Atelier (Bangalore) to feel the hardware, fluted panels, curtains/blinds fabrics, wallpapers, and quartz tops, or tour our automated factory to see our CNC machinery in action.'
+    answer: 'Absolutely. We encourage homeowners to visit our Experience Center in Uppal (Bagayath Layout) to feel the hardware, fluted panels, curtains/blinds fabrics, wallpapers, and quartz tops, or tour our automated factory to see our CNC machinery in action.'
   },
   {
     category: 'Pricing',
