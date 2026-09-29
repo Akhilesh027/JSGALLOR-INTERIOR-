@@ -33,7 +33,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
         plotMeasurements,
         budgetEstimation,
         locality,
-        formType: 'experience_center_visit',
+        formType: 'consultation',
       });
     } catch (err) {
       console.error('Error saving contact inquiry:', err);
@@ -41,7 +41,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
       setLoading(false);
       setSubmitted(true);
 
-      const text = `*New Experience Center Appointment*%0A` +
+      const text = `*New 3D Design Session Booking*%0A` +
         `*Name:* ${formName}%0A` +
         `*Phone:* ${formPhone}%0A` +
         `*City:* ${formCity}%0A` +
@@ -49,7 +49,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
         `*Plot Measurements / Area:* ${plotMeasurements || 'Not specified'}%0A` +
         `*Budget Estimation:* ${budgetEstimation}%0A` +
         (locality ? `*Locality / Community:* ${locality}%0A` : '') + `%0A` +
-        `I would like to book an appointment to visit your experience center.`;
+        `Please confirm my free 3D design consultation appointment.`;
 
       const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
 
@@ -84,7 +84,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 space-y-20">
         {/* Experience Centers Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {EXPERIENCE_CENTERS.map((center) => (
             <div
               key={center.id}

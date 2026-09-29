@@ -75,12 +75,31 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             <div className="flex flex-col gap-2 pt-2 text-xs text-gray-700">
               <a href="tel:+918143678491" className="flex items-center gap-2 hover:text-[#8c6b38] transition-colors">
                 <Phone className="w-4 h-4 text-[#8c6b38]" />
-                <span>+91 81436 78491</span>
+                <span>+91 81436 78491 / +91 70758 48516</span>
               </a>
               <a href="mailto:info@jsgallor.com" className="flex items-center gap-2 hover:text-[#8c6b38] transition-colors">
                 <Mail className="w-4 h-4 text-[#8c6b38]" />
                 <span>info@jsgallor.com</span>
               </a>
+            </div>
+
+            {/* Experience Centers & Showrooms */}
+            <div className="pt-2 border-t border-[#e8e2d9] space-y-2 text-xs text-gray-600">
+              <div className="font-bold text-[#8c6b38] uppercase tracking-wider text-[10px]">
+                Experience Centers (Interiors & Furniture):
+              </div>
+              <div>
+                <span className="font-semibold text-gray-900 block text-[11px]">Banjara Hills Showroom:</span>
+                <span className="text-[11px]">Road No. 12, Banjara Hills, Hyderabad – 500034</span>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-900 block text-[11px]">Madhapur Design HQ:</span>
+                <span className="text-[11px]">WorkFlo Bizness Square, Jubilee Enclave, Madhapur – 500081</span>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-900 block text-[11px]">Uppal Central Center:</span>
+                <span className="text-[11px]">Main Road, Near Metro Pillar 812, Uppal – 500039</span>
+              </div>
             </div>
 
             {/* Social Profile Links */}
