@@ -60,7 +60,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
         `*City/Locality:* ${locality || 'Hyderabad'}%0A%0A` +
         `Please confirm my free 3D design consultation appointment.`;
 
-      const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
+      const whatsappUrl = `https://wa.me/917075848516?text=${text}`;
 
       setTimeout(() => {
         window.open(whatsappUrl, '_blank');
@@ -140,7 +140,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                     pattern="[0-9]*"
                     maxLength={10}
                     required
-                    placeholder="e.g. 8143678491"
+                    placeholder="e.g. 7075848516"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
                     className="w-full px-4 py-3 rounded-xl bg-[#faf8f5] border border-[#e8e2d9] text-[#111111] placeholder-gray-400 focus:outline-none focus:border-[#8c6b38] focus:bg-white transition-all"

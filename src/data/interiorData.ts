@@ -542,7 +542,7 @@ export const EXPERIENCE_CENTERS: ExperienceCenter[] = [
     city: 'Hyderabad',
     area: 'Uppal',
     address: 'Road No 1, Bagayath layout, 3rd floor, Plot 288, Uppal, Hyderabad, Telangana 500039',
-    phone: '+91 81436 78491 / +91 70758 48516',
+    phone: '+91 70758 48516',
     email: 'support@jsgallor.com',
     timing: 'Mon – Sun: 10:00 AM – 8:30 PM',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',

@@ -898,7 +898,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ onOpenConsultation
                   </button>
 
                   <a
-                    href={`https://wa.me/918143678491?text=${encodeURIComponent(`Hi JS GALLOR team, I was reviewing ${currentResidence.title} (${currentResidence.community}) in your portfolio and would like to consult on my floor plan.`)}`}
+                    href={`https://wa.me/917075848516?text=${encodeURIComponent(`Hi JS GALLOR team, I was reviewing ${currentResidence.title} (${currentResidence.community}) in your portfolio and would like to consult on my floor plan.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center justify-center gap-2 cursor-pointer shadow-md"

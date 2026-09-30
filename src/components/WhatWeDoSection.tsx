@@ -239,7 +239,7 @@ export const WhatWeDoSection: React.FC<WhatWeDoSectionProps> = ({ onOpenConsulta
                   </button>
 
                   <a
-                    href={`https://wa.me/918143678491?text=${encodeURIComponent(`Hi JS GALLOR, I would like to inquire about ${activeService.title} for my home.`)}`}
+                    href={`https://wa.me/917075848516?text=${encodeURIComponent(`Hi JS GALLOR, I would like to inquire about ${activeService.title} for my home.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center justify-center gap-1.5 cursor-pointer shadow-md"

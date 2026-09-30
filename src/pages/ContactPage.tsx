@@ -51,7 +51,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
         (locality ? `*Locality / Community:* ${locality}%0A` : '') + `%0A` +
         `Please confirm my free 3D design consultation appointment.`;
 
-      const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
+      const whatsappUrl = `https://wa.me/917075848516?text=${text}`;
 
       setTimeout(() => {
         window.open(whatsappUrl, '_blank');
@@ -146,7 +146,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
 
               <div className="p-6 pt-0">
                 <a
-                  href={`https://wa.me/918143678491?text=${encodeURIComponent(`Hi JS GALLOR, I would like to visit the ${center.name} in ${center.city}.`)}`}
+                  href={`https://wa.me/917075848516?text=${encodeURIComponent(`Hi JS GALLOR, I would like to visit the ${center.name} in ${center.city}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 rounded-xl bg-gradient-to-r from-[#8c6b38] via-[#c5a880] to-[#8c6b38] text-white text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:brightness-105 transition-all cursor-pointer shadow-md"
@@ -179,8 +179,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
                 <Phone className="w-5 h-5 text-[#8c6b38] shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-[#111111]">Central Helpline</div>
-                  <a href="tel:+918143678491" className="text-[#8c6b38] font-semibold text-sm">
-                    +91 81436 78491
+                  <a href="tel:+917075848516" className="text-[#8c6b38] font-semibold text-sm">
+                    +91 70758 48516
                   </a>
                   <div className="text-[#777777] text-[11px] mt-0.5">Available Mon–Sun: 9:00 AM – 9:00 PM</div>
                 </div>
@@ -236,7 +236,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenConsultation }) 
                       pattern="[0-9]*"
                       maxLength={10}
                       required
-                      placeholder="e.g. 8143678491"
+                      placeholder="e.g. 7075848516"
                       value={formPhone}
                       onChange={(e) => setFormPhone(e.target.value.replace(/\D/g, ''))}
                       className="w-full px-4 py-3 rounded-xl bg-white border border-[#e8e2d9] text-[#111111] placeholder-gray-400 focus:outline-none focus:border-[#8c6b38] transition-all"

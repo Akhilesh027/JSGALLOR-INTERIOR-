@@ -227,7 +227,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ onOpenConsultation }
             </button>
 
             <a
-              href="https://wa.me/918143678491"
+              href="https://wa.me/917075848516"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full bg-[#faf8f5] hover:bg-gray-100 border border-[#e8e2d9] text-[#111111] font-semibold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center gap-2"

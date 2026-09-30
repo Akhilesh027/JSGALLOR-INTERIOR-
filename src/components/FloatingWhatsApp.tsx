@@ -2,7 +2,7 @@ import React from 'react';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const FloatingWhatsApp: React.FC = () => {
-  const whatsappNumber = "918143678491";
+  const whatsappNumber = "917075848516";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi JS GALLOR team, I am on your website and would like an interior consultation.")}`;
 
   return (

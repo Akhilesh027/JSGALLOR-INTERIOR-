@@ -10,7 +10,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
   const { navigate } = useRouter();
-  const whatsappNumber = "918143678491";
+  const whatsappNumber = "917075848516";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi JS GALLOR Interiors team, I would like an interior design consultation.")}`;
 
   const socialLinks = [
@@ -73,9 +73,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </p>
 
             <div className="flex flex-col gap-2 pt-2 text-xs text-gray-700">
-              <a href="tel:+918143678491" className="flex items-center gap-2 hover:text-[#8c6b38] transition-colors">
+              <a href="tel:+917075848516" className="flex items-center gap-2 hover:text-[#8c6b38] transition-colors">
                 <Phone className="w-4 h-4 text-[#8c6b38]" />
-                <span>+91 81436 78491 / +91 70758 48516</span>
+                <span>+91 70758 48516</span>
               </a>
               <a href="mailto:info@jsgallor.com" className="flex items-center gap-2 hover:text-[#8c6b38] transition-colors">
                 <Mail className="w-4 h-4 text-[#8c6b38]" />

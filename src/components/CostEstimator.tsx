@@ -126,7 +126,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
       `*Handover Target:* ${calculation.deliveryDays} Days%0A%0A` +
       `Please share the itemized quotation breakdown and 3D layout options for this configuration.`;
 
-    const whatsappUrl = `https://wa.me/918143678491?text=${text}`;
+    const whatsappUrl = `https://wa.me/917075848516?text=${text}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -332,7 +332,7 @@ export const CostEstimator: React.FC<CostEstimatorProps> = ({
                     inputMode="numeric"
                     pattern="[0-9]*"
                     maxLength={10}
-                    placeholder="Mobile Number (e.g. 8143678491)"
+                    placeholder="Mobile Number (e.g. 7075848516)"
                     value={customerPhone}
                     onChange={(e) => setCustomerPhone(e.target.value.replace(/\D/g, ''))}
                     className="w-full px-4 py-2.5 rounded-xl bg-[#faf8f5] border border-[#e8e2d9] text-xs text-[#111111] placeholder-gray-400 focus:outline-none focus:border-[#8c6b38] transition-all"

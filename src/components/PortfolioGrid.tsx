@@ -79,34 +79,34 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-12">
           {/* Master Spotlight Showcase (7 Cols on Desktop) - Brighter & Real Images */}
           <div className="lg:col-span-7 relative min-h-[500px] sm:min-h-[580px] rounded-3xl overflow-hidden border-2 border-[#c5a880]/60 shadow-2xl group flex flex-col justify-between p-7 sm:p-10 bg-neutral-900">
-            {/* Cinematic Background Image - Bright & Crystal Clear */}
+            {/* Cinematic Background Image - Bright, Natural & Clear */}
             <img
               key={masterProject.id}
               src={masterProject.image}
               alt={masterProject.title}
-              className="absolute inset-0 w-full h-full object-cover filter brightness-[0.85] contrast-[1.05] scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
+              className="absolute inset-0 w-full h-full object-cover filter brightness-100 contrast-[1.02] scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
             />
-            {/* Lighter, softer overlay so the real room image remains bright and clearly visible */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent" />
+            {/* Soft, luminous gradient so the real room architecture stays bright */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
             {/* Top HUD: Index, Locality & Tier */}
             <div className="relative z-10 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2.5">
-                <span className="font-mono text-xs text-[#fae19c] font-bold tracking-widest px-3 py-1.5 rounded-full bg-black/60 border border-[#c5a880]/50 backdrop-blur-md shadow-md">
+                <span className="font-mono text-xs sm:text-sm text-[#fae19c] font-bold tracking-widest px-3.5 py-1.5 rounded-full bg-black/60 border border-[#c5a880]/50 backdrop-blur-md shadow-md">
                   RESIDENCE 0{activeProjectIndex + 1}
                 </span>
-                <span className="text-xs px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md text-[#fae19c] border border-white/20 font-bold shadow-sm">
+                <span className="text-xs sm:text-sm px-3.5 py-1.5 rounded-full bg-black/50 backdrop-blur-md text-[#fae19c] border border-white/20 font-bold shadow-sm">
                   {masterProject.tierName}
                 </span>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-mono">
-                <span className="flex items-center gap-1.5 bg-black/60 px-3 py-1.5 rounded-full border border-white/20 text-white backdrop-blur-md shadow-sm">
-                  <MapPin className="w-3.5 h-3.5 text-[#fae19c]" />
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-mono">
+                <span className="flex items-center gap-1.5 bg-black/60 px-3.5 py-1.5 rounded-full border border-white/20 text-white backdrop-blur-md shadow-sm font-medium">
+                  <MapPin className="w-4 h-4 text-[#fae19c]" />
                   {masterProject.locality}
                 </span>
-                <span className="flex items-center gap-1.5 bg-black/60 px-3 py-1.5 rounded-full border border-white/20 text-emerald-300 font-bold backdrop-blur-md shadow-sm">
-                  <Clock className="w-3.5 h-3.5 text-emerald-400" />
+                <span className="flex items-center gap-1.5 bg-black/60 px-3.5 py-1.5 rounded-full border border-white/20 text-emerald-300 font-bold backdrop-blur-md shadow-sm">
+                  <Clock className="w-4 h-4 text-emerald-400" />
                   {masterProject.duration}
                 </span>
               </div>
@@ -115,34 +115,34 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
             {/* Bottom Content Dossier */}
             <div className="relative z-10 space-y-4 pt-16">
               <div>
-                <span className="text-xs uppercase font-mono tracking-widest text-[#fae19c] font-bold block mb-1 drop-shadow-sm">
+                <span className="text-xs sm:text-sm uppercase font-mono tracking-widest text-[#fae19c] font-bold block mb-1.5 drop-shadow-sm">
                   {masterProject.category} Architectural Curation
                 </span>
-                <h3 className="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight drop-shadow-md">
+                <h3 className="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight drop-shadow-md">
                   {masterProject.title}
                 </h3>
-                <p className="text-gray-100 text-xs sm:text-sm font-normal mt-2 max-w-xl leading-relaxed line-clamp-2 drop-shadow-sm">
+                <p className="text-gray-100 text-sm sm:text-base font-normal mt-2.5 max-w-xl leading-relaxed drop-shadow-sm">
                   {masterProject.description}
                 </p>
               </div>
 
               {/* Master Specs Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-white/20 text-xs text-gray-100">
-                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
-                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Area</div>
-                  <div className="font-bold text-white text-sm">{masterProject.sqft}</div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 border-t border-white/20">
+                <div className="bg-black/50 backdrop-blur-md p-3 rounded-xl border border-white/15">
+                  <div className="text-xs text-gray-300 uppercase font-mono font-bold">Area</div>
+                  <div className="font-bold text-white text-base sm:text-lg mt-0.5">{masterProject.sqft}</div>
                 </div>
-                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
-                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Typology</div>
-                  <div className="font-bold text-white text-sm">{masterProject.category}</div>
+                <div className="bg-black/50 backdrop-blur-md p-3 rounded-xl border border-white/15">
+                  <div className="text-xs text-gray-300 uppercase font-mono font-bold">Typology</div>
+                  <div className="font-bold text-white text-base sm:text-lg mt-0.5">{masterProject.category}</div>
                 </div>
-                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
-                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Handover</div>
-                  <div className="font-bold text-emerald-300 text-sm">{masterProject.duration}</div>
+                <div className="bg-black/50 backdrop-blur-md p-3 rounded-xl border border-white/15">
+                  <div className="text-xs text-gray-300 uppercase font-mono font-bold">Handover</div>
+                  <div className="font-bold text-emerald-300 text-base sm:text-lg mt-0.5">{masterProject.duration}</div>
                 </div>
-                <div className="bg-black/55 backdrop-blur-md p-2.5 rounded-xl border border-white/15">
-                  <div className="text-[10px] text-gray-300 uppercase font-mono font-bold">Status</div>
-                  <div className="font-bold text-[#fae19c] text-sm">Handed Over</div>
+                <div className="bg-black/50 backdrop-blur-md p-3 rounded-xl border border-white/15">
+                  <div className="text-xs text-gray-300 uppercase font-mono font-bold">Status</div>
+                  <div className="font-bold text-[#fae19c] text-base sm:text-lg mt-0.5">Handed Over</div>
                 </div>
               </div>
 
@@ -150,14 +150,14 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <button
                   onClick={() => navigate('/portfolio')}
-                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#c5a880] via-[#e2cfb4] to-[#b8976b] text-black font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer shadow-xl"
+                  className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#c5a880] via-[#e2cfb4] to-[#b8976b] text-black font-bold text-xs sm:text-sm uppercase tracking-wider hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer shadow-xl"
                 >
                   <span>Explore In Full Portfolio</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-4 h-4" />
                 </button>
                 <button
                   onClick={onOpenConsultation}
-                  className="px-5 py-3 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs uppercase tracking-wider border border-white/30 backdrop-blur-md transition-all cursor-pointer shadow-md"
+                  className="px-6 py-3.5 rounded-xl bg-white/20 hover:bg-white/30 text-white font-bold text-xs sm:text-sm uppercase tracking-wider border border-white/30 backdrop-blur-md transition-all cursor-pointer shadow-md"
                 >
                   Inquire Similar
                 </button>
@@ -174,40 +174,40 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
                   const targetIdx = filteredProjects.findIndex((p) => p.id === sat.id);
                   if (targetIdx >= 0) setActiveProjectIndex(targetIdx);
                 }}
-                className="group relative flex-1 min-h-[160px] rounded-3xl overflow-hidden border border-[#e2d8ca] hover:border-[#c5a880] cursor-pointer transition-all duration-500 flex flex-col justify-between p-5 bg-neutral-900 shadow-md hover:shadow-2xl"
+                className="group relative flex-1 min-h-[170px] rounded-3xl overflow-hidden border-2 border-[#e2d8ca] hover:border-[#c5a880] cursor-pointer transition-all duration-500 flex flex-col justify-between p-5 bg-neutral-900 shadow-md hover:shadow-2xl"
               >
                 <img
                   src={sat.image}
                   alt={sat.title}
-                  className="absolute inset-0 w-full h-full object-cover filter brightness-[0.75] group-hover:brightness-[0.9] contrast-[1.05] group-hover:scale-105 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover filter brightness-100 contrast-[1.02] group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
                 {/* Top Badge */}
                 <div className="relative z-10 flex items-center justify-between">
-                  <span className="font-mono text-[10px] text-[#fae19c] font-bold px-2.5 py-1 rounded-full bg-black/60 border border-white/20 backdrop-blur-md">
+                  <span className="font-mono text-xs text-[#fae19c] font-bold px-3 py-1 rounded-full bg-black/60 border border-white/20 backdrop-blur-md">
                     SATELLITE 0{idx + 1}
                   </span>
-                  <span className="text-[10px] uppercase font-mono font-bold text-white bg-black/60 px-2.5 py-1 rounded-full border border-white/20 backdrop-blur-md">
+                  <span className="text-xs uppercase font-mono font-bold text-white bg-black/60 px-3 py-1 rounded-full border border-white/20 backdrop-blur-md">
                     {sat.category}
                   </span>
                 </div>
 
-                {/* Bottom Details on hover */}
+                {/* Bottom Details */}
                 <div className="relative z-10 w-full flex items-end justify-between">
                   <div>
-                    <h4 className="font-serif-luxury text-xl font-bold text-white group-hover:text-[#fae19c] transition-colors drop-shadow-md">
+                    <h4 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white group-hover:text-[#fae19c] transition-colors drop-shadow-md">
                       {sat.title}
                     </h4>
-                    <p className="text-xs text-gray-100 flex items-center gap-1.5 mt-0.5 drop-shadow-sm font-medium">
-                      <MapPin className="w-3 h-3 text-[#fae19c]" />
+                    <p className="text-sm sm:text-base text-gray-100 flex items-center gap-2 mt-1 drop-shadow-sm font-medium">
+                      <MapPin className="w-3.5 h-3.5 text-[#fae19c]" />
                       <span>{sat.locality}</span>
                       <span>•</span>
-                      <span>{sat.sqft}</span>
+                      <span className="font-mono font-bold text-[#fae19c]">{sat.sqft}</span>
                     </p>
                   </div>
 
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#fae19c] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1 shrink-0 bg-black/60 px-3 py-1 rounded-full border border-[#c5a880]/50 backdrop-blur-md">
+                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#fae19c] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex items-center gap-1 shrink-0 bg-black/60 px-3.5 py-1.5 rounded-full border border-[#c5a880]/50 backdrop-blur-md">
                     <span>Inspect</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
@@ -218,43 +218,45 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
         </div>
 
         {/* ========================================================================= */}
-        {/* COMPLEMENTARY SPATIAL GALLERY STRIP (Hover-Activated Architectural Tiles) */}
+        {/* COMPLEMENTARY SPATIAL GALLERY STRIP (Architectural Room Studies) - BRIGHT & CLEAR */}
         {/* ========================================================================= */}
-        <div className="mt-8">
-          <div className="flex items-center justify-between mb-4 px-2">
-            <span className="text-xs font-mono uppercase tracking-widest text-gray-600 font-bold">
+        <div className="mt-10">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-5 px-1 gap-2">
+            <span className="text-sm sm:text-base font-mono uppercase tracking-wider text-gray-900 font-bold">
               Architectural Room Studies & Spatial Details
             </span>
-            <span className="text-xs text-gray-500">
+            <span className="text-xs sm:text-sm text-gray-600 font-medium">
               Hover to reveal monograph coordinates
             </span>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
             {supplementaryGallery.map((item, idx) => (
               <div
                 key={item.id}
                 onClick={() => navigate('/portfolio')}
-                className="relative h-60 rounded-2xl overflow-hidden border border-[#e8e2d9] hover:border-[#8c6b38] cursor-pointer group transition-all duration-500 shadow-sm hover:shadow-xl"
+                className="relative h-64 sm:h-72 rounded-2xl overflow-hidden border-2 border-[#e8e2d9] hover:border-[#8c6b38] cursor-pointer group transition-all duration-500 shadow-md hover:shadow-2xl hover:-translate-y-1"
               >
+                {/* Real Room Photo - Full Brightness (NO DARK FILTER) */}
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover filter brightness-[0.6] group-hover:brightness-[0.9] group-hover:scale-110 transition-all duration-700 ease-out"
+                  className="w-full h-full object-cover filter brightness-100 contrast-[1.02] group-hover:scale-105 transition-all duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                {/* Soft, gentle bottom gradient for clear text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                {/* Minimalist Floating Tag (Always subtle, vibrant on hover) */}
-                <div className="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-[10px] font-mono text-[#fae19c] font-bold">
+                {/* Floating Tag - Clean White / High Contrast */}
+                <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-lg border border-[#e8e2d9] text-xs font-mono text-gray-900 font-bold shadow-md">
                   SPACE 0{idx + 1}
                 </div>
 
-                {/* Hover Reveal Title Overlay */}
-                <div className="absolute bottom-0 inset-x-0 p-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/90 to-transparent">
-                  <h5 className="font-serif-luxury text-base font-bold text-white group-hover:text-[#fae19c] transition-colors leading-snug">
+                {/* Bottom Title & Specs - Increased Font Sizes & Always Clear */}
+                <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                  <h5 className="font-serif-luxury text-lg sm:text-xl font-bold text-white group-hover:text-[#fae19c] transition-colors leading-tight drop-shadow-md">
                     {item.title}
                   </h5>
-                  <div className="flex items-center justify-between text-[11px] text-gray-200 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center justify-between text-xs sm:text-sm text-gray-200 mt-2 font-medium">
                     <span>{item.locality}</span>
                     <span className="text-[#fae19c] font-mono font-bold">{item.sqft}</span>
                   </div>
@@ -265,19 +267,19 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onOpenConsultation
         </div>
 
         {/* Full Monograph Bottom Banner */}
-        <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-white border border-[#e8e2d9] shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-white border border-[#e8e2d9] shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center sm:text-left">
-            <h4 className="font-serif-luxury text-xl font-bold text-[#111111]">
+            <h4 className="font-serif-luxury text-2xl sm:text-3xl font-bold text-[#111111]">
               Seeking Room-by-Room CAD Floorplans & High-Res Lookbooks?
             </h4>
-            <p className="text-xs text-gray-600 font-normal">
+            <p className="text-sm sm:text-base text-gray-600 font-normal">
               Explore 18+ documented turnkey residences with material schedules, before-after journeys, and live spatial radar.
             </p>
           </div>
 
           <button
             onClick={() => navigate('/portfolio')}
-            className="px-7 py-3.5 rounded-2xl bg-gray-100 hover:bg-[#8c6b38] text-gray-900 hover:text-white border border-gray-200 hover:border-[#8c6b38] text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all duration-300 shadow-md shrink-0 cursor-pointer"
+            className="px-7 py-4 rounded-2xl bg-gray-100 hover:bg-[#8c6b38] text-gray-900 hover:text-white border border-gray-200 hover:border-[#8c6b38] text-sm font-bold uppercase tracking-wider flex items-center gap-2 transition-all duration-300 shadow-md shrink-0 cursor-pointer"
           >
             <span>Enter Complete Portfolio Monograph</span>
             <ArrowRight className="w-4 h-4" />

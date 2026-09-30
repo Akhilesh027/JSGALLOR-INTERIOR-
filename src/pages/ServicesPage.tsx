@@ -848,7 +848,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                     </button>
 
                     <a
-                      href={`https://wa.me/918143678491?text=${encodeURIComponent(`Hi JS GALLOR team, I would like to explore ${current.title} for my residence.`)}`}
+                      href={`https://wa.me/917075848516?text=${encodeURIComponent(`Hi JS GALLOR team, I would like to explore ${current.title} for my residence.`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3.5 rounded-xl bg-[#faf8f5] hover:bg-gray-100 text-[#111111] border border-[#e8e2d9] font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center justify-center gap-2 cursor-pointer shadow-sm"

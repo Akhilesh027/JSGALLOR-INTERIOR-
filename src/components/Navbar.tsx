@@ -22,7 +22,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappNumber = "918143678491";
+  const whatsappNumber = "917075848516";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi JS GALLOR team, I would like to consult on luxury bespoke interiors for my residence.")}`;
 
   // Social Links
@@ -234,11 +234,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
 
           <div className="pt-2 border-t border-gray-200 flex flex-col gap-3">
             <a
-              href="tel:+918143678491"
+              href="tel:+917075848516"
               className="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-800"
             >
               <Phone className="w-4 h-4 text-[#8c6b38]" />
-              Call +91 81436 78491
+              Call +91 70758 48516
             </a>
             <a
               href={whatsappUrl}
