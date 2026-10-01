@@ -378,9 +378,9 @@ export const CollectionsPage: React.FC<CollectionsPageProps> = ({
                   <td className="py-4 px-4">Imported Italian Statuario / Onyx Backlit</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-4 font-bold text-[#111111] font-mono">Civil Re-engineering</td>
+                  <td className="py-4 px-4 font-bold text-[#111111] font-mono">Structural Re-engineering</td>
                   <td className="py-4 px-4 text-gray-400">Not Included (Modular Only)</td>
-                  <td className="py-4 px-4 text-[#555555]">Basic Civil & Electrical Shifting</td>
+                  <td className="py-4 px-4 text-[#555555]">Basic Electrical & Layout Shifting</td>
                   <td className="py-4 px-4 text-[#111111] font-semibold">Full Structural Alterations & Drywalls</td>
                 </tr>
                 <tr>

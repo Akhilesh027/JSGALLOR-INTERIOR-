@@ -65,7 +65,7 @@ export const EstimatorPage: React.FC<EstimatorPageProps> = ({
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
               <div>
-                <strong className="text-[#111111]">Direct Factory Cut:</strong> By manufacturing in our own 60,000 sq.ft facility with advanced CNC machinery, we eliminate retail middleman commissions and cut material wastage by 18%.
+                <strong className="text-[#111111]">Direct Factory Cut:</strong> By manufacturing in our own 1,00,000 sq.ft facility with advanced CNC machinery, we eliminate retail middleman commissions and cut material wastage by 18%.
               </div>
             </div>
             <div className="flex items-start gap-3">

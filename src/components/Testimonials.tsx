@@ -195,7 +195,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ onOpenConsultation }
               <Building2 className="w-5 h-5 text-[#8c6b38]" />
             </div>
             <div>
-              <div className="font-mono text-lg font-bold text-[#111111]">60,000 sq.ft</div>
+              <div className="font-mono text-lg font-bold text-[#111111]">1,00,000 sq.ft</div>
               <div className="text-xs text-[#666666]">In-house automated CNC manufacturing hub</div>
             </div>
           </div>

@@ -22,7 +22,7 @@ export const TrustStrip: React.FC = () => {
       icon: ShieldCheck
     },
     {
-      metric: '60,000 sq.ft',
+      metric: '1,00,000 sq.ft',
       label: 'In-House CNC Facility',
       subtext: 'Homag automated factory floor',
       icon: Factory

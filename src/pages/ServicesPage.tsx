@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { SERVICES_DATA } from '../data/interiorData';
 import { 
-  ChefHat, Sofa, BedDouble, Hammer, Cpu, Lightbulb, 
+  ChefHat, Sofa, BedDouble, Cpu, Lightbulb, 
   CheckCircle2, ArrowRight, ArrowLeft, Sparkles, ShieldCheck, 
-  Clock, Factory, MessageSquare, Compass, Eye, Maximize2, 
+  Clock, Factory, MessageSquare, Eye, Maximize2, 
   Layers, Sliders, ChevronLeft, ChevronRight, Check
 } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
@@ -28,11 +28,6 @@ const HOTSPOTS_DATA: Record<string, { x: number; y: number; label: string; desc:
     { x: 42, y: 48, label: 'Tinted Bronze Glass Profiles', desc: 'Anodized slim aluminium sliding frames with air-cushioned silent soft-stops.' },
     { x: 72, y: 58, label: 'Concealed Proximity LEDs', desc: 'Automatic vertical profile channels inside wardrobe bays triggering upon door slide.' },
     { x: 24, y: 72, label: 'Hydraulic Storage Platform', desc: 'Dual heavy-duty hydraulic gas struts supporting upholstered acoustic headboard.' }
-  ],
-  'civil-renovations': [
-    { x: 50, y: 70, label: 'Diamond-Polished Marble', desc: 'Large format Bottochino & Statuario laid with laser-calibrated zero lippage.' },
-    { x: 30, y: 40, label: 'Concealed Conduit Rewiring', desc: 'Fire-retardant electrical conduits with Schneider scene switches and surge protection.' },
-    { x: 75, y: 50, label: 'Structural Space Engineering', desc: 'Certified load-bearing beam modifications and moisture-sealed drywalls.' }
   ],
   'smart-automation': [
     { x: 46, y: 36, label: 'Lutron Scene Keypads', desc: 'One-touch Welcome, Dine, Cinema, and Rest architectural presets.' },
@@ -66,12 +61,6 @@ const MATERIAL_SWATCHES: Record<string, { name: string; origin: string; type: st
     { name: 'Champagne Metal Trim', origin: 'Aviation Aluminum', type: 'Door Extrusions', color: '#c5a880' },
     { name: 'Velvet Jewelry Lining', origin: 'Plush Microfiber', type: 'Accessory Trays', color: '#3b2426' }
   ],
-  'civil-renovations': [
-    { name: 'Bottochino Fiorito', origin: 'Italian Natural Stone', type: 'Diamond Polished', color: '#ded7c5' },
-    { name: 'Micro-Cement Concrete', origin: 'Seamless Polymer', type: 'Textured Walls', color: '#8c8c88' },
-    { name: 'Schneider Unica Switches', origin: 'Matte Anthracite', type: 'Smart Scene Plates', color: '#202226' },
-    { name: 'Waterproofing Polymer', origin: 'Dr. Fixit Fastflex', type: 'Subfloor Membrane', color: '#5c6b73' }
-  ],
   'smart-automation': [
     { name: 'Lutron Glass Keypad', origin: 'Architectural Touch', type: '4-Scene Presets', color: '#0f1115' },
     { name: 'Somfy Silent Motors', origin: 'Decibel-Dampened', type: 'Drapery Automation', color: '#4a5568' },
@@ -103,11 +92,6 @@ const PERSPECTIVE_ANGLES: Record<string, string[]> = {
     'https://images.unsplash.com/photo-1540518614846-7ede433c4ef2?auto=format&fit=crop&w=1400&q=80',
     'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1400&q=80'
   ],
-  'civil-renovations': [
-    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80',
-    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80',
-    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80'
-  ],
   'smart-automation': [
     'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80',
     'https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1400&q=80',
@@ -135,7 +119,6 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
     ChefHat: <ChefHat className="w-5 h-5 text-amber-400" />,
     Sofa: <Sofa className="w-5 h-5 text-amber-400" />,
     BedDouble: <BedDouble className="w-5 h-5 text-amber-400" />,
-    Hammer: <Hammer className="w-5 h-5 text-amber-400" />,
     Cpu: <Cpu className="w-5 h-5 text-amber-400" />,
     Lightbulb: <Lightbulb className="w-5 h-5 text-amber-400" />
   };
@@ -180,13 +163,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#c5a880]/10 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#c5a880]/15 border border-[#c5a880]/30 text-[#8c6b38] text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-            <Compass className="w-3.5 h-3.5 text-[#8c6b38]" />
-            <span>Master Architectural Practice & In-House Homag Manufacturing</span>
-          </div>
-
           <h1 className="font-serif-luxury text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#111111] leading-tight">
-            Six Specialized Disciplines.{' '}
+            Five Specialized Disciplines.{' '}
             <span className="gold-gradient-text italic block sm:inline">Turnkey Architectural Execution.</span>
           </h1>
 
@@ -223,7 +201,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
             <div className="flex items-center justify-between border-b border-[#e8e2d9] pb-4">
               <div className="text-xs uppercase font-bold tracking-widest text-[#8c6b38] flex items-center gap-2">
                 <Layers className="w-4 h-4" />
-                <span>Architectural Exhibition Lookbook • 6 Disciplines</span>
+                <span>Architectural Exhibition Lookbook • 5 Disciplines</span>
               </div>
               <span className="text-xs text-[#777777] font-mono">
                 Click any image to expand full-width atelier
@@ -308,10 +286,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                 </div>
               </div>
 
-              {/* Card 03: Master & Bedroom Suites - 4 Cols */}
+              {/* Card 03: Master & Bedroom Suites - 6 Cols */}
               <div 
                 onClick={() => handleSelectDiscipline('master-suites')}
-                className="md:col-span-4 group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#c5a880] shadow-2xl transition-all duration-700 select-none bg-black"
+                className="md:col-span-6 group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#c5a880] shadow-2xl transition-all duration-700 select-none bg-black"
               >
                 <img 
                   src={SERVICES_DATA[2].image} 
@@ -343,10 +321,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                 </div>
               </div>
 
-              {/* Card 04: Civil & Turnkey Structural - 4 Cols */}
+              {/* Card 04: Smart Automation - 6 Cols */}
               <div 
-                onClick={() => handleSelectDiscipline('civil-renovations')}
-                className="md:col-span-4 group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#c5a880] shadow-2xl transition-all duration-700 select-none bg-black"
+                onClick={() => handleSelectDiscipline('smart-automation')}
+                className="md:col-span-6 group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#c5a880] shadow-2xl transition-all duration-700 select-none bg-black"
               >
                 <img 
                   src={SERVICES_DATA[3].image} 
@@ -357,42 +335,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                 
                 <div className="absolute top-5 left-5 right-5 flex items-center justify-between">
                   <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-[#c5a880]/30 text-amber-300 text-[11px] font-mono font-bold">
-                    04 // Structural Engineering
-                  </span>
-                  <div className="w-9 h-9 rounded-xl bg-black/70 backdrop-blur-md border border-white/15 flex items-center justify-center">
-                    {iconMap['Hammer']}
-                  </div>
-                </div>
-
-                <div className="absolute bottom-5 left-5 right-5 space-y-1.5">
-                  <span className="text-[11px] uppercase tracking-widest text-[#c5a880] font-mono">
-                    Marble Laying • Rewiring
-                  </span>
-                  <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white group-hover:text-[#c5a880] transition-colors">
-                    {SERVICES_DATA[3].title}
-                  </h3>
-                  <div className="pt-1 flex items-center gap-2 text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
-                    <span>Click to Expand</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 05: Smart Automation - 4 Cols */}
-              <div 
-                onClick={() => handleSelectDiscipline('smart-automation')}
-                className="md:col-span-4 group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#c5a880] shadow-2xl transition-all duration-700 select-none bg-black"
-              >
-                <img 
-                  src={SERVICES_DATA[4].image} 
-                  alt={SERVICES_DATA[4].title}
-                  className="w-full h-full object-cover filter brightness-[0.85] group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent" />
-                
-                <div className="absolute top-5 left-5 right-5 flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-[#c5a880]/30 text-amber-300 text-[11px] font-mono font-bold">
-                    05 // IoT & Intelligence
+                    04 // IoT & Intelligence
                   </span>
                   <div className="w-9 h-9 rounded-xl bg-black/70 backdrop-blur-md border border-white/15 flex items-center justify-center">
                     {iconMap['Cpu']}
@@ -404,7 +347,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                     Lutron Scenes • Motorized Drapes
                   </span>
                   <h3 className="font-serif-luxury text-xl sm:text-2xl font-bold text-white group-hover:text-[#c5a880] transition-colors">
-                    {SERVICES_DATA[4].title}
+                    {SERVICES_DATA[3].title}
                   </h3>
                   <div className="pt-1 flex items-center gap-2 text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
                     <span>Click to Expand</span>
@@ -413,21 +356,21 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                 </div>
               </div>
 
-              {/* Card 06: Architectural Lighting & Ceilings - Full 12 Cols Panoramic Banner */}
+              {/* Card 05: Architectural Lighting & Ceilings - Full 12 Cols Panoramic Banner */}
               <div 
                 onClick={() => handleSelectDiscipline('lighting-ceiling')}
                 className="md:col-span-12 group relative h-[320px] sm:h-[360px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#c5a880] shadow-2xl transition-all duration-700 select-none bg-black"
               >
                 <img 
-                  src={SERVICES_DATA[5].image} 
-                  alt={SERVICES_DATA[5].title}
+                  src={SERVICES_DATA[4].image} 
+                  alt={SERVICES_DATA[4].title}
                   className="w-full h-full object-cover filter brightness-[0.8] group-hover:brightness-95 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/50 to-transparent" />
                 
                 <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
                   <span className="px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#c5a880]/30 text-amber-300 text-xs font-mono font-bold">
-                    06 // Luminous Architecture & False Ceilings
+                    05 // Luminous Architecture & False Ceilings
                   </span>
                   <div className="w-10 h-10 rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 flex items-center justify-center">
                     {iconMap['Lightbulb']}
@@ -439,10 +382,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                     Saint-Gobain Anti-Crack • 95+ CRI Magnetic Tracks
                   </span>
                   <h3 className="font-serif-luxury text-2xl sm:text-4xl font-bold text-white group-hover:text-[#c5a880] transition-colors">
-                    {SERVICES_DATA[5].title}
+                    {SERVICES_DATA[4].title}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-300 font-light hidden sm:block">
-                    {SERVICES_DATA[5].description}
+                    {SERVICES_DATA[4].description}
                   </p>
                   <div className="pt-2 flex items-center gap-2 text-xs font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
                     <span>Click Image to Open Architectural Atelier & Blueprint</span>
@@ -516,7 +459,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#e8e2d9] pb-6">
               <div>
                 <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#8c6b38] font-bold mb-2">
-                  <span>Discipline 0{activeIndex + 1} of 06</span>
+                  <span>Discipline 0{activeIndex + 1} of 0{SERVICES_DATA.length}</span>
                   <span>•</span>
                   <span>{current.idealFor}</span>
                 </div>
@@ -865,7 +808,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
                   className="w-full py-3 rounded-2xl bg-[#faf8f5] hover:bg-gray-100 text-[#444444] hover:text-black text-xs font-bold uppercase tracking-wider transition-all cursor-pointer border border-[#e8e2d9] flex items-center justify-center gap-2"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
-                  <span>Explore Other 5 Disciplines</span>
+                  <span>Return to All Disciplines</span>
                 </button>
               </div>
 
@@ -873,54 +816,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenConsultation }
           </div>
         )}
 
-        {/* 4-STEP TURNKEY EXECUTION PROTOCOL */}
-        <div className="mt-24 p-8 sm:p-12 rounded-3xl bg-white border border-[#e8e2d9] shadow-xl space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#8c6b38] font-mono">
-              The Turnkey Workflow
-            </span>
-            <h3 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#111111]">
-              From Architectural BIM to Clean Key Handover
-            </h3>
-            <p className="text-xs sm:text-sm text-[#666666] font-light">
-              Every discipline is executed under our standardized precision assembly protocol.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-[#faf8f5] border border-[#e8e2d9] shadow-sm space-y-2.5">
-              <div className="text-lg font-mono font-bold text-[#8c6b38]">01. 3D Ergonomics</div>
-              <h5 className="font-bold text-sm text-[#111111]">BIM Space Simulation</h5>
-              <p className="text-xs text-[#555555] font-light leading-relaxed">
-                Full 3D digital model with realistic lighting, conduit routing, and exact millimetric measurements.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-[#faf8f5] border border-[#e8e2d9] shadow-sm space-y-2.5">
-              <div className="text-lg font-mono font-bold text-[#8c6b38]">02. Precision CNC</div>
-              <h5 className="font-bold text-sm text-[#111111]">Factory Pre-Fabrication</h5>
-              <p className="text-xs text-[#555555] font-light leading-relaxed">
-                85% of woodwork machined in our 60,000 sq.ft Homag unit with PUR waterproof edge-banding.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-[#faf8f5] border border-[#e8e2d9] shadow-sm space-y-2.5">
-              <div className="text-lg font-mono font-bold text-[#8c6b38]">03. Clean Assembly</div>
-              <h5 className="font-bold text-sm text-[#111111]">Dust-Free Installation</h5>
-              <p className="text-xs text-[#555555] font-light leading-relaxed">
-                Silent flat-pack assembly in your residence. Zero carpenter sawing mess or toxic balcony cutting.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-[#faf8f5] border border-[#e8e2d9] shadow-sm space-y-2.5">
-              <div className="text-lg font-mono font-bold text-[#8c6b38]">04. Handover</div>
-              <h5 className="font-bold text-sm text-[#111111]">140-Point Quality Handover</h5>
-              <p className="text-xs text-[#555555] font-light leading-relaxed">
-                Formal deep cleaning, registered 10-year warranty certificate, and post-move maintenance checks.
-              </p>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>

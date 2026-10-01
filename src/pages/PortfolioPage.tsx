@@ -61,7 +61,7 @@ const RESIDENCE_PROJECTS: ResidenceProject[] = [
     tierBadge: 'Turnkey Luxury',
     sqft: '2,450 sq.ft',
     duration: '48 Days Handover',
-    scope: 'Complete Turnkey Penthouse Curation (Civil + Modular + Curtains, Blinds & Wall Paneling)',
+    scope: 'Complete Turnkey Penthouse Curation (Architectural + Modular + Curtains, Blinds & Wall Paneling)',
     coverImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80',
     narrative: 'Engineered for a senior technology director at Kokapet. The client requested an open-concept great room with acoustic fluted wall panels, motorized sheer curtains, textured wallpapers, and seamless concealed storage.',
     verifiedSpecs: [
@@ -174,7 +174,7 @@ const RESIDENCE_PROJECTS: ResidenceProject[] = [
     tierBadge: 'Haute Living',
     sqft: '4,800 sq.ft',
     duration: '65 Days Handover',
-    scope: 'Structural Civil Demolition, Italian Marble, Lutron Automated Drapery & Wall Paneling',
+    scope: 'Structural Demolition, Italian Marble, Lutron Automated Drapery & Wall Paneling',
     coverImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80',
     narrative: 'An uncompromising architectural residence featuring massive double-height bookmatched Italian Statuario marble wall panels, Lutron motorized curtains & blackout blinds, European wallpapers, and solid smoked oak joinery.',
     verifiedSpecs: [
@@ -479,7 +479,7 @@ const RESIDENCE_PROJECTS: ResidenceProject[] = [
     tierBadge: 'Bespoke Estate',
     sqft: '5,600 sq.ft',
     duration: '70 Days Handover',
-    scope: 'Full Villa Turnkey Architectural Millwork, Civil Marble & Landscaping',
+    scope: 'Full Villa Turnkey Architectural Millwork, Italian Marble & Landscaping',
     coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80',
     narrative: 'A grand lake-facing estate in Gandipet blending European classical architecture with cutting-edge precision joinery. Features backlit Iranian onyx bar consoles and handcrafted solid teakwood paneling.',
     verifiedSpecs: [

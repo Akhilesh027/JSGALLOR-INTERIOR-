@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
             </button>
 
             <p className="text-xs text-gray-600 leading-relaxed max-w-sm">
-              Premium residential interior architecture, factory modular craftsmanship, and turnkey civil execution for discerning homeowners in Hyderabad, Bangalore & Pan-India.
+              Premium residential interior architecture, factory modular craftsmanship, and turnkey execution for discerning homeowners in Hyderabad, Bangalore & Pan-India.
             </p>
 
             <div className="flex flex-col gap-2 pt-2 text-xs text-gray-700">
@@ -90,7 +90,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               </div>
               <div>
                 <span className="text-[11px] leading-relaxed block text-gray-800">
-                  Road No 1, Bagayath layout, 3rd floor, Plot 288, Uppal, Hyderabad, Telangana 500039
+                  3rd Floor, Plot No. 288, Road No. 1, Bhagayath Layout, Uppal, Hyderabad, Telangana 500039
                 </span>
               </div>
             </div>
@@ -135,11 +135,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
               <li>
                 <button onClick={() => navigate('/services')} className="hover:text-black transition-colors cursor-pointer text-left">
                   Master & Bedroom Suites
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/services')} className="hover:text-black transition-colors cursor-pointer text-left">
-                  Civil & Structural Restructuring
                 </button>
               </li>
               <li>

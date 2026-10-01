@@ -46,7 +46,7 @@ export const BeforeAfterSlider: React.FC = () => {
       guarantees: [
         {
           title: 'Zero On-Site Cutting',
-          description: '85% of woodwork digitally machined in our 60,000 sq.ft precision CNC unit for silent, dust-free installation.'
+          description: '85% of woodwork digitally machined in our 1,00,000 sq.ft precision CNC unit for silent, dust-free installation.'
         },
         {
           title: 'Calacatta Marble & Fluted Louvers',

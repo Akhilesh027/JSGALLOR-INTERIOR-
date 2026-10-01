@@ -82,7 +82,7 @@ export const TIERS_DATA: TierPackage[] = [
     tagline: 'Boutique Architectural Craft, Natural Stone, Teak Veneer & Automation',
     badge: 'Ultra-Luxury & Bespoke',
     tierDescriptor: 'Haute Architectural Living',
-    scopeHighlight: 'Civil Re-Engineering, Italian Marble & Full IoT Automation',
+    scopeHighlight: 'Structural Re-Engineering, Italian Marble & Full IoT Automation',
     priceRange: 'Custom Architectural Commission',
     startingPrice: 2200000,
     deliveryDays: 65,
@@ -98,7 +98,7 @@ export const TIERS_DATA: TierPackage[] = [
       countertop: 'Imported Italian Statuario / Onyx Backlit Quartz with Waterfall Mitred Edges'
     },
     inclusions: [
-      'Complete civil layout modification, dry wall partition & pocket door installations',
+      'Complete layout modification, dry wall partition & pocket door installations',
       'Italian Statuario bookmatched marble & natural smoked veneer architectural wall paneling',
       'Full home Lutron / Tuya IoT automation (voice, ambient mood scenes, motorized curtains & blinds)',
       'Floor-to-ceiling motorized blackout curtains, sheer drapery & imported European wallpapers',
@@ -160,22 +160,6 @@ export const SERVICES_DATA: InteriorService[] = [
     ],
     capabilities: ['Full Height Loft Engineering', 'Hydraulic Lift-Up Storage', 'Moisture Proof Core'],
     idealFor: 'Master Suites, Childrens Study Rooms & Guest Suites'
-  },
-  {
-    id: 'civil-renovations',
-    title: 'Civil & Turnkey Structural Works',
-    subtitle: 'End-to-End Civil Restructuring, Dry Walls & Premium Flooring',
-    description: 'Beyond carpentry. We take complete turnkey responsibility for wall knockdowns, Italian marble flooring, electrical rewiring, plumbing, and micro-cement textures.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
-    icon: 'Hammer',
-    highlights: [
-      'Space-planning structural alterations & drywall partition installations',
-      'Large-format Italian Statuario & Bottochino marble laying with diamond polish',
-      'Concealed conduit electrical replanning with Schneider/Legrand switches',
-      'Asian Paints Royale luxury emulsion, lime-wash textures & micro-cement'
-    ],
-    capabilities: ['Structural Engineer Approvals', 'Dust-Controlled Demolition', 'Zero Leakage Guarantee'],
-    idealFor: 'Older Home Renovations, Bare Shell Handover Apartments & Villas'
   },
   {
     id: 'smart-automation',
@@ -330,7 +314,7 @@ export const PORTFOLIO_PROJECTS: PortfolioItem[] = [
     city: 'Hyderabad',
     sqft: '4,800 sq.ft',
     duration: '65 Days Handover',
-    scope: 'Full Villa Civil & Smart Automation',
+    scope: 'Full Villa Architectural & Smart Automation',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
@@ -477,11 +461,11 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
   {
     stepNumber: '03',
-    title: 'Site Execution & Turnkey Civil Works',
+    title: 'Site Execution & Turnkey Installation Works',
     duration: 'Days 26 – 38',
     icon: 'Hammer',
     description: 'Clean, dust-controlled on-site assembly by certified technicians alongside false ceiling, electrical conduits, designer tiling, and painting overseen by a dedicated project manager.',
-    deliverables: ['Daily WhatsApp Video Updates', 'Civil & Electrical Milestones', 'Dust-Free Tool Assembly']
+    deliverables: ['Daily WhatsApp Video Updates', 'Installation & Electrical Milestones', 'Dust-Free Tool Assembly']
   },
   {
     stepNumber: '04',
@@ -541,12 +525,12 @@ export const EXPERIENCE_CENTERS: ExperienceCenter[] = [
     name: 'Experience Center & Office',
     city: 'Hyderabad',
     area: 'Uppal',
-    address: 'Road No 1, Bagayath layout, 3rd floor, Plot 288, Uppal, Hyderabad, Telangana 500039',
+    address: '3rd Floor, Plot No. 288, Road No. 1, Bhagayath Layout, Uppal, Hyderabad, Telangana 500039',
     phone: '+91 70758 48516',
     email: 'support@jsgallor.com',
     timing: 'Mon – Sun: 10:00 AM – 8:30 PM',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
-    mapsUrl: 'https://maps.google.com/?q=Road+No+1+Bagayath+layout+Plot+288+Uppal+Hyderabad+Telangana+500039',
+    mapsUrl: 'https://maps.google.com/?q=Plot+No.+288,+Road+No.+1,+Bhagayath+Layout,+Uppal,+Hyderabad,+Telangana+500039',
     features: ['Live Modular Kitchen & Wardrobe Mockups', 'Solid Wood & Luxury Living Displays', 'Live Hardware Rig (Hafele, Hettich & Blum)']
   }
 ];
@@ -560,7 +544,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     category: 'Process',
     question: 'How is JS GALLOR different from local interior contractors?',
-    answer: 'Unlike traditional interior contractors who rely on manual carpentry on-site, 85% of your interiors (including modular kitchens, wardrobes, wall panels, and finishes) are precision-machined in our 60,000 sq.ft ISO-certified factory using automated Homag CNC routers. When materials arrive at your site, they are pre-drilled and flat-packed for rapid, dust-free assembly within 12–15 days.'
+    answer: 'Unlike traditional interior contractors who rely on manual carpentry on-site, 85% of your interiors (including modular kitchens, wardrobes, wall panels, and finishes) are precision-machined in our 1,00,000 sq.ft ISO-certified factory using automated Homag CNC routers. When materials arrive at your site, they are pre-drilled and flat-packed for rapid, dust-free assembly within 12–15 days.'
   },
   {
     category: 'Materials',
@@ -575,7 +559,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     category: 'Process',
     question: 'Can I visit the factory or see materials before confirming?',
-    answer: 'Absolutely. We encourage homeowners to visit our Experience Center in Uppal (Bagayath Layout) to feel the hardware, fluted panels, curtains/blinds fabrics, wallpapers, and quartz tops, or tour our automated factory to see our CNC machinery in action.'
+    answer: 'Absolutely. We encourage homeowners to visit our Experience Center in Uppal (Bhagayath Layout) to feel the hardware, fluted panels, curtains/blinds fabrics, wallpapers, and quartz tops, or tour our automated factory to see our CNC machinery in action.'
   },
   {
     category: 'Pricing',
@@ -586,7 +570,7 @@ export const FAQ_DATA: FaqItem[] = [
 
 export const TRUST_METRICS = [
   { metric: '1,450+', label: 'Homes Delivered On Time', icon: 'Home' },
-  { metric: '60,000 sq.ft', label: 'In-House Automated Factory', icon: 'Factory' },
+  { metric: '1,00,000 sq.ft', label: 'In-House Automated Factory', icon: 'Factory' },
   { metric: '10 Yrs', label: 'Structural Warranty', icon: 'ShieldCheck' },
   { metric: '4.9 ★', label: 'Client Satisfaction', icon: 'Star' },
   { metric: '₹1,000', label: 'Daily Delay Penalty Clause', icon: 'Clock' }
